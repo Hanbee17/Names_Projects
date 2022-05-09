@@ -16,7 +16,7 @@ function languageButtons() {
 
 function intialButtons() {
   shipButton = new Clickable();
-  shipButton.image = firstImage;
+  shipButton.image = ferryShip;
   shipButton.imageScale = 1.2;
   shipButton.locate(-400, -500);
   shipButton.resize(windowWidth*0.11, windowWidth*0.05);
@@ -24,7 +24,7 @@ function intialButtons() {
   shipButton.color = "#00000000";
   shipButton.strokeWeight = 00;
   shipButton.onRelease = function() {
-    alert('Yeah');
+    alert('It could be very disturbing and traumatic experience. Please leave if you do not want it.');
     pageState = 'mainKor'
     shipButton.locate(-400, -500);
   }
