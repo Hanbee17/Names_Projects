@@ -24,7 +24,7 @@ This project began from my ongoing question about why should people move on from
 May 9-11: Coding Overall Functionality
 May 12-14: Making and Implementing Assets/Art
 May 15: Debugging and Testing Software
-May 16-24: Additional Features and Finishing Touches
+May 16-22: Additional Features and Finishing Touches
 
 **Credits**
 
