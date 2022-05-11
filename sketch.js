@@ -38,7 +38,7 @@ function draw() {
       break;
     case 'mainKor':
       mainKorScreen();
-      //korButton.locate(-400, -500);
+      korButton.locate(-400, -500);
       break;
     case 'mainEng':
       mainEngScreen();
@@ -55,6 +55,8 @@ function draw() {
   korButton.draw();
   engButton.draw();
   spanButton.draw();
+
+  name1.draw();
 }
 
 function firstScreen() {
@@ -85,7 +87,7 @@ function drawWaves() {
     }
   }
   ferryAnimation();
-  //korButton.locate(windowWidth*0.5, level2*0.99)
+  nameButtons();
 }
 
 

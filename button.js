@@ -4,6 +4,8 @@ var korButton;
 var engButton;
 var spanButton;
 
+var name1;
+
 function startButton() {
   shipButton.locate(windowWidth*0.45, windowHeight*0.45);
 }
@@ -13,6 +15,10 @@ function languageButtons() {
   engButton.locate(windowWidth*0.9, windowHeight*0.04);
   spanButton.locate(windowWidth*0.95, windowHeight*0.04);
 }
+
+function nameButtons () {
+  name1.locate(windowWidth*0.5, level2*1.2)
+ }
 
 function intialButtons() {
   shipButton = new Clickable();
@@ -69,6 +75,16 @@ function intialButtons() {
    alert('Spanish');
    pageState = 'mainSpan'
    shipButton.locate(-400, -500);
+ }
+
+ name1 = new Clickable();
+ name1.locate(-400, -500);
+ //name1.resize(windowWidth*0.03, windowWidth*0.015);
+ name1.text = "NAME";
+ name1.color = "#00000000";
+ name1.strokeWeight = 00;
+ name1.onRelease = function() {
+   alert('name1');
  }
 
 }
