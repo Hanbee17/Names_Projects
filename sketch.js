@@ -141,11 +141,11 @@ function nameRandom() {
 function nameRandomSetUp () {
   for (let i = 0; i < names.length; i++) {
     yname[i] = random(level2 * 1.1, windowHeight * 2.8);
-    if (yname[i] <= level2 * 1.1) {
+    if (yname[i] <= level2 * 1.5) {
       xname[i] = random(windowWidth * 0.4, windowWidth * 0.6)
-    } else if (yname[i] < level2 * 1.15 && yname[i] > level2 * 1.3) {
+    } else if (yname[i] < level2 * 1.3 && yname[i] > level2 * 1.5) {
       xname[i] = random(windowWidth * 0.2, windowWidth * 0.8)
-    } else if (yname[i] < level2 * 1.35 && yname[i] > windowHeight * 2.8) {
+    } else if (yname[i] < level2 * 2.8 && yname[i] > windowHeight * 1.3) {
       xname[i] = random(windowWidth * 0.1, windowWidth * 0.9)
     }
   }
