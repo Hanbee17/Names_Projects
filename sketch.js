@@ -1,3 +1,11 @@
+let names = ['name1', 'name2', 'name3', 'name4', 'name5', 'name6', 'name7', 'name8', 'name9', 'name10',
+             'name11', 'name12', 'name13', 'name14', 'name15', 'name16', 'name17', 'name18', 'name19', 'name20',
+             'name21', 'name22', 'name23', 'name24', 'name25', 'name26', 'name27', 'name28', 'name29', 'name30',
+             'name31', 'name32', 'name33', 'name34', 'name35', 'name36', 'name37', 'name38', 'name39', 'name40']
+
+let yname = [];
+let xname = [];
+
 let pageState = 'first';
 
 let ferryShip;
@@ -28,6 +36,8 @@ function setup() {
   background(0);
   intialButtons();
   firstScreen();
+  nameRandomSetUp();
+  nameRandom();
 }
 
 function draw() {
@@ -56,11 +66,26 @@ function draw() {
   engButton.draw();
   spanButton.draw();
 
-  name1.draw();
+  studentButton.draw();
+  teacherButton.draw();
 }
 
 function firstScreen() {
   startButton();
+}
+
+function mainKorScreen() {
+  createCanvas(windowWidth * 1, windowHeight * 3);
+  background(202, 240, 248);
+  languageButtons();
+
+  textAlign(CENTER);
+  textSize(20);
+  fill(0);
+  text('This is Korean page. Press W to begin. 메인 페이지', windowWidth * 0.5, windowHeight * 0.2);
+
+  drawWaves();
+  nameRandom();
 }
 
 function drawWaves() {
@@ -88,51 +113,60 @@ function drawWaves() {
   }
   ferryAnimation();
   nameButtons();
+  nameRandom();
 }
 
 
 function ferryAnimation() {
   imageMode(CENTER);
-    if (keyIsDown) {
-      if (keyCode == 87) {
-        ferryAni.changeFrame(3);
-        ferryAni.play();
-      } else {
-        ferryAni.stop();
-      }
+  if (keyIsDown) {
+    if (keyCode == 87) {
+      // ferryAni.changeFrame(1);
+      ferryAni.nextFrame();
+      //ferryAni.play();
+    } else {
+      ferryAni.stop();
+    }
   }
-  animation(ferryAni, windowWidth * 0.5, level2 * 0.9,);
+  animation(ferryAni, windowWidth * 0.5, level2 * 0.9, );
 }
 
-  function mainKorScreen() {
-    createCanvas(windowWidth * 1, windowHeight * 3);
-    background(202, 240, 248);
-    languageButtons();
-
-    drawWaves();
-
-    textAlign(CENTER);
-    textSize(20);
-    fill(0);
-    text('This is Korean page. Press W to begin. 메인 페이지', windowWidth * 0.5, windowHeight * 0.2);
+function nameRandom() {
+  for (let i = 0; i < names.length; i++) {
+    fill(255);
+    text(names[i], xname[i], yname[i]);
   }
+}
 
-  function mainEngScreen() {
-    createCanvas(windowWidth, windowHeight);
-    background(0, 150, 199);
-    textAlign(CENTER);
-    textSize(20);
-    fill(206, 212, 218);
-    text('This is English Page.', windowWidth * 0.5, windowHeight * 0.5);
-    languageButtons();
+function nameRandomSetUp () {
+  for (let i = 0; i < names.length; i++) {
+    yname[i] = random(level2 * 1.1, windowHeight * 2.8);
+    if (yname[i] <= level2 * 1.1) {
+      xname[i] = random(windowWidth * 0.4, windowWidth * 0.6)
+    } else if (yname[i] < level2 * 1.15 && yname[i] > level2 * 1.3) {
+      xname[i] = random(windowWidth * 0.2, windowWidth * 0.8)
+    } else if (yname[i] < level2 * 1.35 && yname[i] > windowHeight * 2.8) {
+      xname[i] = random(windowWidth * 0.1, windowWidth * 0.9)
+    }
   }
+}
 
-  function mainSpanScreen() {
-    createCanvas(windowWidth, windowHeight);
-    background(0, 150, 199);
-    textAlign(CENTER);
-    textSize(20);
-    fill(206, 212, 218);
-    text('This is Spanish Page.', windowWidth * 0.5, windowHeight * 0.5);
-    languageButtons();
-  }
+function mainEngScreen() {
+  createCanvas(windowWidth, windowHeight);
+  background(0, 150, 199);
+  textAlign(CENTER);
+  textSize(20);
+  fill(206, 212, 218);
+  text('This is English Page.', windowWidth * 0.5, windowHeight * 0.5);
+  languageButtons();
+}
+
+function mainSpanScreen() {
+  createCanvas(windowWidth, windowHeight);
+  background(0, 150, 199);
+  textAlign(CENTER);
+  textSize(20);
+  fill(206, 212, 218);
+  text('This is Spanish Page.', windowWidth * 0.5, windowHeight * 0.5);
+  languageButtons();
+}

@@ -4,7 +4,8 @@ var korButton;
 var engButton;
 var spanButton;
 
-var name1;
+var studentButton;
+var teacherButton;
 
 function startButton() {
   shipButton.locate(windowWidth*0.45, windowHeight*0.45);
@@ -17,7 +18,8 @@ function languageButtons() {
 }
 
 function nameButtons () {
-  name1.locate(windowWidth*0.5, level2*1.2)
+  studentButton.locate(windowWidth*0.5, level2*1.2);
+  teacherButton.locate(windowWidth*0.4, level2*1.1);
  }
 
 function intialButtons() {
@@ -77,14 +79,23 @@ function intialButtons() {
    shipButton.locate(-400, -500);
  }
 
- name1 = new Clickable();
- name1.locate(-400, -500);
- //name1.resize(windowWidth*0.03, windowWidth*0.015);
- name1.text = "NAME";
- name1.color = "#00000000";
- name1.strokeWeight = 00;
- name1.onRelease = function() {
-   alert('name1');
+ studentButton = new Clickable();
+ studentButton.locate(-400, -500);
+ studentButton.text = "Students";
+ studentButton.color = "#00000000";
+ studentButton.strokeWeight = 00;
+ studentButton.onRelease = function() {
+   alert('Students');
  }
+
+ teacherButton = new Clickable();
+ teacherButton.locate(-400, -500);
+ teacherButton.text = "Teachers";
+ teacherButton.color = "#00000000";
+ teacherButton.strokeWeight = 00;
+ teacherButton.onRelease = function() {
+   alert('Teachers');
+ }
+
 
 }
