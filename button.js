@@ -4,8 +4,10 @@ var korButton;
 var engButton;
 var spanButton;
 
-var studentButton;
+var crewButton;
+var passengerButton;
 var teacherButton;
+var studentButton;
 
 function startButton() {
   shipButton.locate(windowWidth*0.45, windowHeight*0.45);
@@ -14,12 +16,17 @@ function startButton() {
 function languageButtons() {
   korButton.locate(windowWidth*0.85, windowHeight*0.04);
   engButton.locate(windowWidth*0.9, windowHeight*0.04);
-  spanButton.locate(windowWidth*0.95, windowHeight*0.04);
+  //spanButton.locate(windowWidth*0.95, windowHeight*0.04);
 }
 
 function nameButtons () {
-  studentButton.locate(windowWidth*0.5, level2*1.2);
-  teacherButton.locate(windowWidth*0.4, level2*1.1);
+
+  crewButton.locate(windowWidth*0.4, level2*1.1);
+  passengerButton.locate(windowWidth*0.4, level2*1.3);
+  teacherButton.locate(windowWidth*0.4, level2*1.6);
+  studentButton.locate(windowWidth*0.5, level2*2);
+
+  arrowForLast.locate(windowWidth*0.5, windowHeight*2.9)
  }
 
 function intialButtons() {
@@ -79,13 +86,22 @@ function intialButtons() {
    shipButton.locate(-400, -500);
  }
 
- studentButton = new Clickable();
- studentButton.locate(-400, -500);
- studentButton.text = "Students";
- studentButton.color = "#00000000";
- studentButton.strokeWeight = 00;
- studentButton.onRelease = function() {
-   alert('Students');
+ crewButton = new Clickable();
+ crewButton.locate(-400, -500);
+ crewButton.text = "Crews";
+ crewButton.color = "#00000000";
+ crewButton.strokeWeight = 00;
+ crewButton.onRelease = function() {
+   alert('Crews');
+ }
+
+ passengerButton = new Clickable();
+ passengerButton.locate(-400, -500);
+ passengerButton.text = "Passengers";
+ passengerButton.color = "#00000000";
+ passengerButton.strokeWeight = 00;
+ passengerButton.onRelease = function() {
+   alert('Passengers');
  }
 
  teacherButton = new Clickable();
@@ -97,5 +113,23 @@ function intialButtons() {
    alert('Teachers');
  }
 
+ studentButton = new Clickable();
+ studentButton.locate(-400, -500);
+ studentButton.text = "Students";
+ studentButton.color = "#00000000";
+ studentButton.strokeWeight = 00;
+ studentButton.onRelease = function() {
+   alert('Students');
+ }
+
+arrowForLast = new Clickable();
+arrowForLast.locate(-400, -500);
+arrowForLast.text = "Click to Go Last Page";
+arrowForLast.color = "#00000000";
+arrowForLast.strokeWeight = 00;
+arrowForLast.onRelease = function() {
+  alert('last Page');
+  pageState = 'lastKor'
+}
 
 }
