@@ -329,8 +329,8 @@ let spanish;
 let ferryAni;
 
 var yoff = 0;
-var level1 = 800;
-var level2 = 950;
+var level1 = 500;
+var level2 = 650;
 
 function preload() {
   ferryShip = loadImage('./assets/ship1.png');
@@ -440,26 +440,25 @@ function drawWaves() {
   if (keyIsPressed) {
     if (keyCode == 87) {
       if (level2 > 50) {
-        level1 -= 1.5;
-        level2 -= 1.5;
+        level1 -= 1;
+        level2 -= 1;
       }
       for (let i = 0; i < nameCrews.length; i++) {
-        ynameCrews[i] -= 1.1;
+        ynameCrews[i] -= 1.3;
       }
       for (let i = 0; i < namePassengers.length; i++) {
-        ynamePassengers[i] -= 1.1;
+        ynamePassengers[i] -= 1.3;
       }
       for (let i = 0; i < nameTeachers.length; i++) {
-        ynameTeachers[i] -= 1.1;
+        ynameTeachers[i] -= 1.3;
       }
       for (let i = 0; i < nameStudents.length; i++) {
-        ynameStudents[i] -= 1.1;
+        ynameStudents[i] -= 1.3;
       }
     }
   }
   ferryAnimation();
   nameButtons();
-  nameStudentsRandom();
 }
 
 
@@ -501,8 +500,8 @@ function nameCrewsRandom() {
 
 function nameCrewsRandomSetUp() {
   for (let i = 0; i < nameCrews.length; i++) {
-    ynameCrews[i] = random(level2 * 1.1, windowHeight * 1.3);
-    if (ynameCrews[i] <= level2 * 1.3) {
+    ynameCrews[i] = random(level2 * 1.5, windowHeight * 1.6);
+    if (ynameCrews[i] <= level2 * 1.7) {
       xnameCrews[i] = random(windowWidth * 0.4, windowWidth * 0.5)
     }
   }
@@ -533,8 +532,8 @@ function namePassengersRandom() {
 
 function namePassengersRandomSetUp() {
   for (let i = 0; i < namePassengers.length; i++) {
-    ynamePassengers[i] = random(level2 * 1.35, windowHeight * 1.6);
-    if (ynamePassengers[i] <= level2 * 1.6) {
+    ynamePassengers[i] = random(level2 * 1.65, windowHeight * 1.85);
+    if (ynamePassengers[i] <= level2 * 1.85) {
       xnamePassengers[i] = random(windowWidth * 0.3, windowWidth * 0.6)
     }
   }
@@ -565,8 +564,8 @@ function nameTeachersRandom() {
 
 function nameTeachersRandomSetUp() {
   for (let i = 0; i < nameTeachers.length; i++) {
-    ynameTeachers[i] = random(level2 * 1.65, windowHeight * 1.8);
-    if (ynameTeachers[i] <= level2 * 1.8) {
+    ynameTeachers[i] = random(level2 * 1.9, windowHeight * 2.1);
+    if (ynameTeachers[i] <= level2 * 2.1) {
       xnameTeachers[i] = random(windowWidth * 0.15, windowWidth * 0.85)
     }
   }
@@ -597,8 +596,8 @@ function nameStudentsRandom() {
 
 function nameStudentsRandomSetUp() {
   for (let i = 0; i < nameStudents.length; i++) {
-    ynameStudents[i] = random(level2 * 1.9, windowHeight * 2.8);
-    if (ynameStudents[i] < level2 * 2.8 && ynameStudents[i] > windowHeight * 1.3) {
+    ynameStudents[i] = random(level2 * 2.15, windowHeight * 2.9);
+    if (ynameStudents[i] <= level2 * 2.9) {
       xnameStudents[i] = random(windowWidth * 0.1, windowWidth * 0.9)
     }
   }
