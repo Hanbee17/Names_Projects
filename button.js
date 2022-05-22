@@ -31,8 +31,9 @@ function nameButtons () {
 
 function intialButtons() {
   shipButton = new Clickable();
-  shipButton.image = ferryShip;
-  shipButton.imageScale = 1.2;
+  shipButton.image = shipIcon;
+  shipButton.imageScale = 3.5;
+  shipButton.fitImage = true;
   shipButton.locate(-400, -500);
   shipButton.resize(windowWidth*0.11, windowWidth*0.05);
   shipButton.text = "         ";

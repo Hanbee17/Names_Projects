@@ -321,6 +321,7 @@ let xnameStudents = [];
 
 let pageState = 'first';
 
+let shipIcon;
 let ferryShip;
 let korean;
 let english;
@@ -333,6 +334,7 @@ var level1 = 500;
 var level2 = 650;
 
 function preload() {
+  shipIcon = loadImage('./assets/icon.png');
   ferryShip = loadImage('./assets/ship1.png');
   korean = loadImage('./assets/kor.png');
   english = loadImage('./assets/eng.png');
