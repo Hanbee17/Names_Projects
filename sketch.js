@@ -388,19 +388,30 @@ function draw() {
       firstScreen();
       break;
     case 'mainKor':
+      artistEngButton.locate(-400, -500);
       mainKorScreen();
       break;
     case 'mainEng':
+      artistKorButton.locate(-400, -500);
       mainEngScreen();
       break;
     case 'mainSpan':
-      mainSpanScreen();
+      //mainSpanScreen();
       spanButton.locate(-400, -500);
       break;
     case 'lastKor':
+      artistKorButton.locate(-400, -500);
+      artistEngButton.locate(-400, -500);
       korButton.locate(-400, -500);
       engButton.locate(-400, -500);
       lastPageKor();
+      break;
+    case 'lastEng':
+      artistKorButton.locate(-400, -500);
+      artistEngButton.locate(-400, -500);
+      korButton.locate(-400, -500);
+      engButton.locate(-400, -500);
+      lastPageEng();
       break;
   }
 
@@ -415,7 +426,8 @@ function draw() {
   studentButton.draw();
   teacherButton.draw();
 
-  arrowForLast.draw();
+  artistKorButton.draw();
+  artistEngButton.draw();
 }
 
 function firstScreen() {
@@ -426,6 +438,8 @@ function mainKorScreen() {
   createCanvas(windowWidth * 1, windowHeight * 3);
   background(202, 240, 248);
   languageButtons();
+  artistKor();
+
 
   push();
   textAlign(CENTER);
@@ -438,6 +452,9 @@ function mainKorScreen() {
   text('전체 탑승자 476명 중', windowWidth * 0.5, windowHeight * 0.24);
   text('실종 5명, 사망자 299명으로 총 304명이', windowWidth * 0.5, windowHeight * 0.27);
   text('사망 및 실종된 대형 참사가 일어났다.', windowWidth * 0.5, windowHeight * 0.30);
+
+  fill(0, 150, 199)
+  text('W를 누른 후, 스크롤을 내리세요.', windowWidth * 0.5, windowHeight * 0.35);
   pop();
 
   drawWaves();
@@ -639,19 +656,17 @@ class Star {
  }
 
  show() {
-    fill(255);
+    fill(255, 228, 92);
     noStroke();
-
     this.sx = map(this.x / this.z, 0, 1, 0, width);
     this.sy = map(this.y / this.z, 0, 1, 0, height);
-
     this.size = map(this.z,0,width,10,0);
     ellipse(this.sx,this.sy,this.size,this.size);
   }
 }
 
 function lastPageKor() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight*0.9);
   background(1, 1, 20);
 
   for (let i = 0; i < stars.length; i++) {
@@ -696,39 +711,3 @@ function lastPageKor() {
 
   text("그날의 봄을 잊지 않겠다.", windowWidth * 0.5, windowHeight * 0.81)
 }
-
-function mainEngScreen() {
-  createCanvas(windowWidth * 1, windowHeight * 3);
-  background(202, 240, 248);
-  languageButtons();
-
-  push();
-  textAlign(CENTER);
-  textSize(25);
-  fill(2, 62, 138, 200);
-  textFont(myKfont);
-  text('On April 16, 2014', windowWidth * 0.5, windowHeight * 0.15);
-  text('the Sewol ferry, en route from Incheon to Jeju,', windowWidth * 0.5, windowHeight * 0.18);
-  text('sank in the sea near Jindo,', windowWidth * 0.5, windowHeight * 0.21);
-  text('resulting in a major catastrophe,', windowWidth * 0.5, windowHeight * 0.24);
-  text('with 5 missing and 299 fatalities out of 476 people on board,', windowWidth * 0.5, windowHeight * 0.27);
-  text('resulting in a total of 304 deaths.', windowWidth * 0.5, windowHeight * 0.30);
-  pop();
-
-  drawWaves();
-
-  nameCrewsRandom();
-  namePassengersRandom();
-  nameTeachersRandom();
-  nameStudentsRandom();
-}
-
-// function mainSpanScreen() {
-//   createCanvas(windowWidth, windowHeight);
-//   background(0, 150, 199);
-//   textAlign(CENTER);
-//   textSize(20);
-//   fill(206, 212, 218);
-//   text('This is Spanish Page.', windowWidth * 0.5, windowHeight * 0.5);
-//   languageButtons();
-// }

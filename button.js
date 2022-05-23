@@ -20,13 +20,18 @@ function languageButtons() {
 }
 
 function nameButtons () {
-
   crewButton.locate(windowWidth*0.4, level2*1.3);
   passengerButton.locate(windowWidth*0.4, level2*1.3);
   teacherButton.locate(windowWidth*0.4, level2*1.6);
   studentButton.locate(windowWidth*0.5, level2*2);
+ }
 
-  arrowForLast.locate(windowWidth*0.5, windowHeight*2.9)
+ function artistKor () {
+   artistKorButton.locate(windowWidth*0.5, windowHeight*2.9)
+ }
+
+ function artistEng () {
+   artistEngButton.locate(windowWidth*0.5, windowHeight*2.9)
  }
 
 function intialButtons() {
@@ -40,7 +45,6 @@ function intialButtons() {
   shipButton.color = "#00000000";
   shipButton.strokeWeight = 00;
   shipButton.onRelease = function() {
-    alert('It could be very disturbing and traumatic experience. Please leave if you do not want it.');
     pageState = 'mainKor'
     shipButton.locate(-400, -500);
   }
@@ -123,14 +127,22 @@ function intialButtons() {
    alert('Students');
  }
 
-arrowForLast = new Clickable();
-arrowForLast.locate(-400, -500);
-arrowForLast.text = "Click to Go Last Page";
-arrowForLast.color = "#00000000";
-arrowForLast.strokeWeight = 00;
-arrowForLast.onRelease = function() {
-  alert('last Page');
+artistKorButton = new Clickable();
+artistKorButton.locate(-400, -500);
+artistKorButton.text = "다음으로 가려면 누르세요";
+artistKorButton.color = "#00000000";
+artistKorButton.strokeWeight = 00;
+artistKorButton.onRelease = function() {
   pageState = 'lastKor'
+}
+
+artistEngButton = new Clickable();
+artistEngButton.locate(-400, -500);
+artistEngButton.text = "Click to Go Last Page";
+artistEngButton.color = "#00000000";
+artistEngButton.strokeWeight = 00;
+artistEngButton.onRelease = function() {
+  pageState = 'lastEng'
 }
 
 }
