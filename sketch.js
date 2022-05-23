@@ -306,6 +306,8 @@ let nameCrews = ['박지영',
   '방현수',
 ]
 
+let cvn;
+
 let ynameCrews = [];
 let xnameCrews = [];
 
@@ -335,6 +337,8 @@ var yoff = 0;
 var level1 = 500;
 var level2 = 650;
 
+let stars = [];
+
 
 function preload() {
   myKfont = loadFont('./assets/font1.otf');
@@ -348,11 +352,17 @@ function preload() {
   ferryAni.scale = 0.5;
   ferryAni.looping = false;
   ferryAni.playing = false;
+
+  symbol = loadImage('./assets/ribbon.png');
 }
 
 function setup() {
-  //frameRate(60);
-  createCanvas(windowWidth, windowHeight);
+  cvn = createCanvas(windowWidth, windowHeight * 0.8);
+  cvn.parent('canvas');
+
+  for (let i=0; i<800; i++) {
+   stars.push(new Star());
+ }
 
   background(0);
   intialButtons();
@@ -379,18 +389,18 @@ function draw() {
       break;
     case 'mainKor':
       mainKorScreen();
-      korButton.locate(-400, -500);
       break;
     case 'mainEng':
       mainEngScreen();
-      engButton.locate(-400, -500);
       break;
     case 'mainSpan':
       mainSpanScreen();
       spanButton.locate(-400, -500);
       break;
     case 'lastKor':
-      lastPage();
+      korButton.locate(-400, -500);
+      engButton.locate(-400, -500);
+      lastPageKor();
       break;
   }
 
@@ -427,7 +437,7 @@ function mainKorScreen() {
   text('진도 인근 해상에서 침몰하면서', windowWidth * 0.5, windowHeight * 0.21);
   text('전체 탑승자 476명 중', windowWidth * 0.5, windowHeight * 0.24);
   text('실종 5명, 사망자 299명으로 총 304명이', windowWidth * 0.5, windowHeight * 0.27);
-  text('사망 및 실종 된 대형참사가 일어났다.', windowWidth * 0.5, windowHeight * 0.30);
+  text('사망 및 실종된 대형 참사가 일어났다.', windowWidth * 0.5, windowHeight * 0.30);
   pop();
 
   drawWaves();
@@ -501,17 +511,17 @@ function nameCrewsRandom() {
 
     xnameCrews[i] = xnameCrews[i] + random(-0.25, 0.25);
     if (xnameCrews[i] < 10) {
-      xnameCrews[i] = xnameCrews[i]+10;
+      xnameCrews[i] = xnameCrews[i] + 10;
     }
-    if (xnameCrews[i] > windowWidth-10) {
-      xnameCrews[i] = xnameCrews[i]-10;
+    if (xnameCrews[i] > windowWidth - 10) {
+      xnameCrews[i] = xnameCrews[i] - 10;
     }
     ynameCrews[i] = ynameCrews[i] + random(-0.25, 0.25);
     if (ynameCrews[i] < 200) {
-      ynameCrews[i] = ynameCrews[i]+10;
+      ynameCrews[i] = ynameCrews[i] + 10;
     }
-    if (ynameCrews[i] < windowHeight-10) {
-      ynameCrews[i] = ynameCrews[i]-10;
+    if (ynameCrews[i] < windowHeight - 10) {
+      ynameCrews[i] = ynameCrews[i] - 10;
     }
   }
 }
@@ -533,17 +543,17 @@ function namePassengersRandom() {
 
     xnamePassengers[i] = xnamePassengers[i] + random(-0.25, 0.25);
     if (xnamePassengers[i] < 10) {
-      xnamePassengers[i] = xnamePassengers[i]+10;
+      xnamePassengers[i] = xnamePassengers[i] + 10;
     }
-    if (xnamePassengers[i] > windowWidth-10) {
-      xnamePassengers[i] = xnamePassengers[i]-10;
+    if (xnamePassengers[i] > windowWidth - 10) {
+      xnamePassengers[i] = xnamePassengers[i] - 10;
     }
     ynamePassengers[i] = ynamePassengers[i] + random(-0.25, 0.25);
     if (ynamePassengers[i] < 200) {
-      ynamePassengers[i] = ynamePassengers[i]+10;
+      ynamePassengers[i] = ynamePassengers[i] + 10;
     }
-    if (ynamePassengers[i] < windowHeight-10) {
-      ynamePassengers[i] = ynamePassengers[i]-10;
+    if (ynamePassengers[i] < windowHeight - 10) {
+      ynamePassengers[i] = ynamePassengers[i] - 10;
     }
   }
 }
@@ -565,17 +575,17 @@ function nameTeachersRandom() {
 
     xnameTeachers[i] = xnameTeachers[i] + random(-0.25, 0.25);
     if (xnameTeachers[i] < 10) {
-      xnameTeachers[i] = xnameTeachers[i]+10;
+      xnameTeachers[i] = xnameTeachers[i] + 10;
     }
-    if (xnameTeachers[i] > windowWidth-10) {
-      xnameTeachers[i] = xnameTeachers[i]-10;
+    if (xnameTeachers[i] > windowWidth - 10) {
+      xnameTeachers[i] = xnameTeachers[i] - 10;
     }
     ynameTeachers[i] = ynameTeachers[i] + random(-0.25, 0.25);
     if (ynameTeachers[i] < 200) {
-      ynameTeachers[i] = ynameTeachers[i]+10;
+      ynameTeachers[i] = ynameTeachers[i] + 10;
     }
-    if (ynameTeachers[i] < windowHeight-10) {
-      ynameTeachers[i] = ynameTeachers[i]-10;
+    if (ynameTeachers[i] < windowHeight - 10) {
+      ynameTeachers[i] = ynameTeachers[i] - 10;
     }
   }
 }
@@ -597,17 +607,17 @@ function nameStudentsRandom() {
 
     xnameStudents[i] = xnameStudents[i] + random(-0.25, 0.25);
     if (xnameStudents[i] < 10) {
-      xnameStudents[i] = xnameStudents[i]+10;
+      xnameStudents[i] = xnameStudents[i] + 10;
     }
-    if (xnameTeachers[i] > windowWidth-10) {
-      xnameStudents[i] = xnameStudents[i]-10;
+    if (xnameTeachers[i] > windowWidth - 10) {
+      xnameStudents[i] = xnameStudents[i] - 10;
     }
     ynameStudents[i] = ynameStudents[i] + random(-0.25, 0.25);
     if (ynameStudents[i] < 200) {
-      ynameStudents[i] = ynameStudents[i]+10;
+      ynameStudents[i] = ynameStudents[i] + 10;
     }
-    if (ynameStudents[i] < windowHeight-10) {
-      ynameStudents[i] = ynameStudents[i]-10;
+    if (ynameStudents[i] < windowHeight - 10) {
+      ynameStudents[i] = ynameStudents[i] - 10;
     }
   }
 }
@@ -621,21 +631,96 @@ function nameStudentsRandomSetUp() {
   }
 }
 
-function lastPage() {
+class Star {
+  constructor() {
+   this.x = random(-width,width);
+   this.y = random(-height,height);
+   this.z = random(width);
+ }
+
+ show() {
+    fill(255);
+    noStroke();
+
+    this.sx = map(this.x / this.z, 0, 1, 0, width);
+    this.sy = map(this.y / this.z, 0, 1, 0, height);
+
+    this.size = map(this.z,0,width,10,0);
+    ellipse(this.sx,this.sy,this.size,this.size);
+  }
+}
+
+function lastPageKor() {
   createCanvas(windowWidth, windowHeight);
-  background(0);
-  fill(255);
-  text("This is Artist's Statement Page", windowWidth * 0.5, windowHeight * 0.2)
+  background(1, 1, 20);
+
+  for (let i = 0; i < stars.length; i++) {
+    stars[i].show();
+  }
+
+  imageMode(CENTER);
+  tint(255, 126);
+  image(symbol, windowWidth * 0.5, windowHeight * 0.45, windowWidth * 0.5, windowHeight);
+
+  textAlign(CENTER);
+  textSize(25);
+  fill(248, 249, 250);
+  textFont(myKfont);
+  text("작가의 말", windowWidth * 0.5, windowHeight * 0.06)
+
+  textSize(20);
+  fill(248, 249, 250);
+  text("세월호 참사가 일어난 지 어느덧 8년이 지났다.", windowWidth * 0.5, windowHeight * 0.12)
+  text("그날의 충격도 아픔도 많이 무뎌지는 듯했다.", windowWidth * 0.5, windowHeight * 0.15)
+  text("그러나 아직도 세월호를 잊지 못하냐는 유가족들을 향한 날선 비난에", windowWidth * 0.5, windowHeight * 0.18)
+  text("그날의 참사가 다시 생각났다.", windowWidth * 0.5, windowHeight * 0.21)
+
+  text("우리는 아직도 왜 세월호가 침몰했는지,", windowWidth * 0.5, windowHeight * 0.27)
+  text("구조대는 늦게 도착했는지,", windowWidth * 0.5, windowHeight * 0.30)
+  text("모든 이들이 무사히 구조되었다고 오보가 났었는지 아직 모른다.", windowWidth * 0.5, windowHeight * 0.33)
+  text("그저 사랑하는 가족이 왜 죽었는지 알고 싶다던 유가족들에게 사람들은 비난을 했다.", windowWidth * 0.5, windowHeight * 0.36)
+  text("이제는 놓아주라고 잊으라고 자격도 없는 사람들이 그들을 마구 짓밟았다.", windowWidth * 0.5, windowHeight * 0.39)
+
+  text("이 참사에서", windowWidth * 0.5, windowHeight * 0.45)
+  text("수학여행 간다고 들떠있던 248명의 18살 아이들이 죽었다.", windowWidth * 0.5, windowHeight * 0.48)
+  text("학생들을 지켜주던 10명의 교사도 죽었다.", windowWidth * 0.5, windowHeight * 0.51)
+  text("각자의 이유로 배를 탔던 일반 승객 30명도 죽었다.", windowWidth * 0.5, windowHeight * 0.54)
+  text("선원과 선상 아르바이트생들 10명도 죽었다.", windowWidth * 0.5, windowHeight * 0.57)
+  text("총 304명이 바다에서 죽었다.", windowWidth * 0.5, windowHeight * 0.60)
+  text("5명의 유해는 수습되지 못한 채 바다를 떠돌고 있다.", windowWidth * 0.5, windowHeight * 0.63)
+
+  text("잊으면 안 된다.", windowWidth * 0.5, windowHeight * 0.69)
+  text("당시 17살이던 나에게, 내 친구에게, 내 형제자매들에게 일어났을 수도 있는 일이다.", windowWidth * 0.5, windowHeight * 0.72)
+  text("아무도 이 참사의 유가족들을 비난할 자격이 없다.", windowWidth * 0.5, windowHeight * 0.75)
+
+
+  text("그날의 봄을 잊지 않겠다.", windowWidth * 0.5, windowHeight * 0.81)
 }
 
 function mainEngScreen() {
-  createCanvas(windowWidth, windowHeight);
-  background(0, 150, 199);
-  textAlign(CENTER);
-  textSize(20);
-  fill(206, 212, 218);
-  text('This is English Page.', windowWidth * 0.5, windowHeight * 0.5);
+  createCanvas(windowWidth * 1, windowHeight * 3);
+  background(202, 240, 248);
   languageButtons();
+
+  push();
+  textAlign(CENTER);
+  textSize(25);
+  fill(2, 62, 138, 200);
+  textFont(myKfont);
+  text('On April 16, 2014', windowWidth * 0.5, windowHeight * 0.15);
+  text('the Sewol ferry, en route from Incheon to Jeju,', windowWidth * 0.5, windowHeight * 0.18);
+  text('sank in the sea near Jindo,', windowWidth * 0.5, windowHeight * 0.21);
+  text('resulting in a major catastrophe,', windowWidth * 0.5, windowHeight * 0.24);
+  text('with 5 missing and 299 fatalities out of 476 people on board,', windowWidth * 0.5, windowHeight * 0.27);
+  text('resulting in a total of 304 deaths.', windowWidth * 0.5, windowHeight * 0.30);
+  pop();
+
+  drawWaves();
+
+  nameCrewsRandom();
+  namePassengersRandom();
+  nameTeachersRandom();
+  nameStudentsRandom();
 }
 
 // function mainSpanScreen() {

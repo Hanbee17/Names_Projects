@@ -10,18 +10,18 @@ var teacherButton;
 var studentButton;
 
 function startButton() {
-  shipButton.locate(windowWidth*0.45, windowHeight*0.45);
+  shipButton.locate(windowWidth*0.445, windowHeight*0.35);
 }
 
 function languageButtons() {
-  korButton.locate(windowWidth*0.85, windowHeight*0.04);
-  engButton.locate(windowWidth*0.9, windowHeight*0.04);
+  korButton.locate(windowWidth*0.91, windowHeight*0.04);
+  engButton.locate(windowWidth*0.95, windowHeight*0.04);
   //spanButton.locate(windowWidth*0.95, windowHeight*0.04);
 }
 
 function nameButtons () {
 
-  crewButton.locate(windowWidth*0.4, level2*1.1);
+  crewButton.locate(windowWidth*0.4, level2*1.3);
   passengerButton.locate(windowWidth*0.4, level2*1.3);
   teacherButton.locate(windowWidth*0.4, level2*1.6);
   studentButton.locate(windowWidth*0.5, level2*2);
@@ -48,27 +48,27 @@ function intialButtons() {
  korButton = new Clickable();
  korButton.image = korean;
  korButton.imageScale = 1.2;
+ korButton.fitImage = true;
  korButton.locate(-400, -500);
  korButton.resize(windowWidth*0.03, windowWidth*0.015);
  korButton.text = "         ";
  korButton.color = "#00000000";
  korButton.strokeWeight = 00;
  korButton.onRelease = function() {
-   alert('한국어');
    pageState = 'mainKor'
    shipButton.locate(-400, -500);
  }
 
  engButton = new Clickable();
  engButton.image = english;
- engButton.imageScale = 1.2;
+ engButton.imageScale = 1.1;
+ engButton.fitImage = true;
  engButton.locate(-400, -500);
  engButton.resize(windowWidth*0.03, windowWidth*0.015);
  engButton.text = "         ";
  engButton.color = "#00000000";
  engButton.strokeWeight = 00;
  engButton.onRelease = function() {
-   alert('English');
    pageState = 'mainEng'
    shipButton.locate(-400, -500);
  }
