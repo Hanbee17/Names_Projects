@@ -327,6 +327,8 @@ let korean;
 let english;
 let spanish;
 
+let myKfont;
+
 let ferryAni;
 
 var yoff = 0;
@@ -335,13 +337,15 @@ var level2 = 650;
 
 
 function preload() {
+  myKfont = loadFont('./assets/font1.otf');
   shipIcon = loadImage('./assets/icon.png');
-  ferryShip = loadImage('./assets/1.png');
+  ferryShip = loadImage('./assets/ship1.png');
   korean = loadImage('./assets/kor.png');
   english = loadImage('./assets/eng.png');
   spanish = loadImage('./assets/span.png');
 
-  ferryAni = loadAnimation('./assets/1.png', './assets/43.png')
+  ferryAni = loadAnimation('./assets/ship1.png', './assets/ship88.png');
+  ferryAni.scale = 0.5;
   ferryAni.looping = false;
   ferryAni.playing = false;
 }
@@ -413,10 +417,18 @@ function mainKorScreen() {
   background(202, 240, 248);
   languageButtons();
 
+  push();
   textAlign(CENTER);
-  textSize(20);
-  fill(0);
-  text('This is Korean page. Press W to begin. 메인 페이지', windowWidth * 0.5, windowHeight * 0.2);
+  textSize(25);
+  fill(2, 62, 138, 200);
+  textFont(myKfont);
+  text('2014년 4월 16일,', windowWidth * 0.5, windowHeight * 0.15);
+  text('인천에서 제주로 향하던 여객선 세월호가', windowWidth * 0.5, windowHeight * 0.18);
+  text('진도 인근 해상에서 침몰하면서', windowWidth * 0.5, windowHeight * 0.21);
+  text('전체 탑승자 476명 중', windowWidth * 0.5, windowHeight * 0.24);
+  text('실종 5명, 사망자 299명으로 총 304명이', windowWidth * 0.5, windowHeight * 0.27);
+  text('사망 및 실종 된 대형참사가 일어났다.', windowWidth * 0.5, windowHeight * 0.30);
+  pop();
 
   drawWaves();
 
@@ -461,14 +473,16 @@ function drawWaves() {
       }
     }
   }
+  push();
+  scale(0.7, 0.8);
   ferryAnimation();
+  pop();
   nameButtons();
+  imageMode(CENTER);
 }
 
 
 function ferryAnimation() {
-  ferryShip.scale = 0.5;
-  imageMode(CENTER);
   if (keyIsDown) {
     if (keyCode == 87) {
       ferryAni.nextFrame();
@@ -476,7 +490,7 @@ function ferryAnimation() {
       ferryAni.stop();
     }
   }
-  animation(ferryAni, windowWidth * 0.5, level2 * 0.7);
+  animation(ferryAni, windowWidth * 0.7, level2 * 0.99);
 }
 
 
