@@ -4,10 +4,10 @@ var korButton;
 var engButton;
 var spanButton;
 
-var crewButton;
-var passengerButton;
-var teacherButton;
-var studentButton;
+var crewButtonKor;
+var passengerButtonKor;
+var teacherButtonKor;
+var studentButtonKor;
 
 function startButton() {
   shipButton.locate(windowWidth*0.445, windowHeight*0.35);
@@ -20,14 +20,14 @@ function languageButtons() {
 }
 
 function nameButtons () {
-  crewButton.locate(windowWidth*0.4, level2*1.3);
-  passengerButton.locate(windowWidth*0.4, level2*1.3);
-  teacherButton.locate(windowWidth*0.4, level2*1.6);
-  studentButton.locate(windowWidth*0.5, level2*2);
+  crewButtonKor.locate(windowWidth*0.4, level2*1.3);
+  passengerButtonKor.locate(windowWidth*0.4, level2*1.3);
+  teacherButtonKor.locate(windowWidth*0.4, level2*1.6);
+  studentButtonKor.locate(windowWidth*0.5, level2*2);
  }
 
  function artistKor () {
-   artistKorButton.locate(windowWidth*0.5, windowHeight*2.9)
+   artistKorButton.locate(windowWidth*0.5, windowHeight*2.5)
  }
 
  function artistEng () {
@@ -91,45 +91,52 @@ function intialButtons() {
    shipButton.locate(-400, -500);
  }
 
- crewButton = new Clickable();
- crewButton.locate(-400, -500);
- crewButton.text = "Crews";
- crewButton.color = "#00000000";
- crewButton.strokeWeight = 00;
- crewButton.onRelease = function() {
+ crewButtonKor = new Clickable();
+ crewButtonKor.locate(-400, -500);
+ crewButtonKor.text = "직원";
+ crewButtonKor.color = "#00000000";
+ crewButtonKor.strokeWeight = 00;
+ crewButtonKor.onRelease = function() {
    alert('Crews');
  }
 
- passengerButton = new Clickable();
- passengerButton.locate(-400, -500);
- passengerButton.text = "Passengers";
- passengerButton.color = "#00000000";
- passengerButton.strokeWeight = 00;
- passengerButton.onRelease = function() {
+ passengerButtonKor = new Clickable();
+ passengerButtonKor.locate(-400, -500);
+ passengerButtonKor.text = "승객";
+ passengerButtonKor.color = "#00000000";
+ passengerButtonKor.strokeWeight = 00;
+ passengerButtonKor.onRelease = function() {
    alert('Passengers');
  }
 
- teacherButton = new Clickable();
- teacherButton.locate(-400, -500);
- teacherButton.text = "Teachers";
- teacherButton.color = "#00000000";
- teacherButton.strokeWeight = 00;
- teacherButton.onRelease = function() {
+ teacherButtonKor = new Clickable();
+ teacherButtonKor.locate(-400, -500);
+ teacherButtonKor.text = "선생님";
+ teacherButtonKor.color = "#00000000";
+ teacherButtonKor.strokeWeight = 00;
+ teacherButtonKor.onRelease = function() {
    alert('Teachers');
  }
 
- studentButton = new Clickable();
- studentButton.locate(-400, -500);
- studentButton.text = "Students";
- studentButton.color = "#00000000";
- studentButton.strokeWeight = 00;
- studentButton.onRelease = function() {
+ studentButtonKor = new Clickable();
+ studentButtonKor.locate(-400, -500);
+ studentButtonKor.text = "학생";
+ studentButtonKor.color = "#00000000";
+ studentButtonKor.strokeWeight = 00;
+ studentButtonKor.onRelease = function() {
    alert('Students');
  }
 
 artistKorButton = new Clickable();
 artistKorButton.locate(-400, -500);
+artistKorButton.image = symbol;
+artistKorButton.imageScale = 1;
+artistKorButton.fitImage = true;
 artistKorButton.text = "다음으로 가려면 누르세요";
+artistKorButton.textColor = "#000000";
+artistKorButton.textSize = 20;
+artistKorButton.textFont = myKfont;
+artistKorButton.textScaled = false;
 artistKorButton.color = "#00000000";
 artistKorButton.strokeWeight = 00;
 artistKorButton.onRelease = function() {
