@@ -19,7 +19,7 @@ function mainEngScreen() {
   text('resulting in a total of 304 deaths.', windowWidth * 0.5, windowHeight * 0.30);
 
   fill(0, 150, 199)
-  text('After pressing W, scroll dowm.', windowWidth * 0.5, windowHeight * 0.35);
+  text('Scroll dowm, after pressing W.', windowWidth * 0.5, windowHeight * 0.35);
 
   pop();
 

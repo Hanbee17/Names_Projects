@@ -20,14 +20,14 @@ function languageButtons() {
 }
 
 function nameButtons () {
-  crewButtonKor.locate(windowWidth*0.4, level2*1.3);
-  passengerButtonKor.locate(windowWidth*0.4, level2*1.3);
-  teacherButtonKor.locate(windowWidth*0.4, level2*1.6);
-  studentButtonKor.locate(windowWidth*0.5, level2*2);
+  crewButtonKor.locate(windowWidth*0.475, windowHeight*1);
+  passengerButtonKor.locate(windowWidth*0.475, windowHeight*1.25);
+  teacherButtonKor.locate(windowWidth*0.475, windowHeight*1.55);
+  studentButtonKor.locate(windowWidth*0.475, windowHeight*2.08);
  }
 
  function artistKor () {
-   artistKorButton.locate(windowWidth*0.5, windowHeight*2.5)
+   artistKorButton.locate(windowWidth*0.475, windowHeight*2.5)
  }
 
  function artistEng () {
@@ -94,6 +94,13 @@ function intialButtons() {
  crewButtonKor = new Clickable();
  crewButtonKor.locate(-400, -500);
  crewButtonKor.text = "직원";
+ crewButtonKor.image = symbol;
+ crewButtonKor.imageScale = 1.5;
+ crewButtonKor.fitImage = true;
+ crewButtonKor.textColor = "#FFFFFF";
+ crewButtonKor.textSize = 30;
+ crewButtonKor.textFont = myKfont;
+ crewButtonKor.textScaled = false;
  crewButtonKor.color = "#00000000";
  crewButtonKor.strokeWeight = 00;
  crewButtonKor.onRelease = function() {
@@ -103,6 +110,13 @@ function intialButtons() {
  passengerButtonKor = new Clickable();
  passengerButtonKor.locate(-400, -500);
  passengerButtonKor.text = "승객";
+ passengerButtonKor.image = symbol;
+ passengerButtonKor.imageScale = 1.5;
+ passengerButtonKor.fitImage = true;
+ passengerButtonKor.textColor = "#FFFFFF";
+ passengerButtonKor.textSize = 30;
+ passengerButtonKor.textFont = myKfont;
+ passengerButtonKor.textScaled = false;
  passengerButtonKor.color = "#00000000";
  passengerButtonKor.strokeWeight = 00;
  passengerButtonKor.onRelease = function() {
@@ -112,6 +126,13 @@ function intialButtons() {
  teacherButtonKor = new Clickable();
  teacherButtonKor.locate(-400, -500);
  teacherButtonKor.text = "선생님";
+ teacherButtonKor.image = symbol;
+ teacherButtonKor.imageScale = 1.5;
+ teacherButtonKor.fitImage = true;
+ teacherButtonKor.textColor = "#FFFFFF";
+ teacherButtonKor.textSize = 30;
+ teacherButtonKor.textFont = myKfont;
+ teacherButtonKor.textScaled = false;
  teacherButtonKor.color = "#00000000";
  teacherButtonKor.strokeWeight = 00;
  teacherButtonKor.onRelease = function() {
@@ -121,6 +142,13 @@ function intialButtons() {
  studentButtonKor = new Clickable();
  studentButtonKor.locate(-400, -500);
  studentButtonKor.text = "학생";
+ studentButtonKor.image = symbol;
+ studentButtonKor.imageScale = 1.5;
+ studentButtonKor.fitImage = true;
+ studentButtonKor.textColor = "#FFFFFF";
+ studentButtonKor.textSize = 30;
+ studentButtonKor.textFont = myKfont;
+ studentButtonKor.textScaled = false;
  studentButtonKor.color = "#00000000";
  studentButtonKor.strokeWeight = 00;
  studentButtonKor.onRelease = function() {
@@ -130,11 +158,11 @@ function intialButtons() {
 artistKorButton = new Clickable();
 artistKorButton.locate(-400, -500);
 artistKorButton.image = symbol;
-artistKorButton.imageScale = 1;
+artistKorButton.imageScale = 1.5;
 artistKorButton.fitImage = true;
-artistKorButton.text = "다음으로 가려면 누르세요";
+artistKorButton.text = "작가의 말";
 artistKorButton.textColor = "#000000";
-artistKorButton.textSize = 20;
+artistKorButton.textSize = 25;
 artistKorButton.textFont = myKfont;
 artistKorButton.textScaled = false;
 artistKorButton.color = "#00000000";
