@@ -333,14 +333,15 @@ var yoff = 0;
 var level1 = 500;
 var level2 = 650;
 
+
 function preload() {
   shipIcon = loadImage('./assets/icon.png');
-  ferryShip = loadImage('./assets/ship1.png');
+  ferryShip = loadImage('./assets/1.png');
   korean = loadImage('./assets/kor.png');
   english = loadImage('./assets/eng.png');
   spanish = loadImage('./assets/span.png');
 
-  ferryAni = loadAnimation('./assets/ship1.png', './assets/ship5.png')
+  ferryAni = loadAnimation('./assets/1.png', './assets/43.png')
   ferryAni.looping = false;
   ferryAni.playing = false;
 }
@@ -348,6 +349,7 @@ function preload() {
 function setup() {
   //frameRate(60);
   createCanvas(windowWidth, windowHeight);
+
   background(0);
   intialButtons();
   firstScreen();
@@ -465,18 +467,18 @@ function drawWaves() {
 
 
 function ferryAnimation() {
+  ferryShip.scale = 0.5;
   imageMode(CENTER);
   if (keyIsDown) {
     if (keyCode == 87) {
-      // ferryAni.changeFrame(1);
       ferryAni.nextFrame();
-      //ferryAni.play();
     } else {
       ferryAni.stop();
     }
   }
-  animation(ferryAni, windowWidth * 0.5, level2 * 0.9, );
+  animation(ferryAni, windowWidth * 0.5, level2 * 0.7);
 }
+
 
 function nameCrewsRandom() {
   for (let i = 0; i < nameCrews.length; i++) {
@@ -622,12 +624,12 @@ function mainEngScreen() {
   languageButtons();
 }
 
-function mainSpanScreen() {
-  createCanvas(windowWidth, windowHeight);
-  background(0, 150, 199);
-  textAlign(CENTER);
-  textSize(20);
-  fill(206, 212, 218);
-  text('This is Spanish Page.', windowWidth * 0.5, windowHeight * 0.5);
-  languageButtons();
-}
+// function mainSpanScreen() {
+//   createCanvas(windowWidth, windowHeight);
+//   background(0, 150, 199);
+//   textAlign(CENTER);
+//   textSize(20);
+//   fill(206, 212, 218);
+//   text('This is Spanish Page.', windowWidth * 0.5, windowHeight * 0.5);
+//   languageButtons();
+// }
