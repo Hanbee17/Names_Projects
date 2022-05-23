@@ -33,6 +33,8 @@ function preload() {
   ferryAni.playing = false;
 
   symbol = loadImage('./assets/ribbon.png');
+
+  oceanSound = loadSound('./sound/ocean.mp3');
 }
 
 function setup() {
@@ -82,6 +84,11 @@ function draw() {
       //mainSpanScreen();
       spanButton.locate(-400, -500);
       break;
+    case 'crewPopUp':
+      popUpCrewsKor();
+      korButton.locate(-400, -500);
+      engButton.locate(-400, -500);
+      break;
     case 'lastKor':
       artistKorButton.locate(-400, -500);
       artistEngButton.locate(-400, -500);
@@ -111,6 +118,8 @@ function draw() {
 
   artistKorButton.draw();
   artistEngButton.draw();
+
+  closeButton.draw();
 }
 
 function firstScreen() {

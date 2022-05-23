@@ -9,6 +9,8 @@ var passengerButtonKor;
 var teacherButtonKor;
 var studentButtonKor;
 
+var closeButton;
+
 function startButton() {
   shipButton.locate(windowWidth*0.445, windowHeight*0.35);
 }
@@ -47,7 +49,10 @@ function intialButtons() {
   shipButton.onRelease = function() {
     pageState = 'mainKor'
     shipButton.locate(-400, -500);
+    oceanSound.play();
+    oceanSound.loop();
   }
+
 
  korButton = new Clickable();
  korButton.image = korean;
@@ -103,8 +108,7 @@ function intialButtons() {
  crewButtonKor.textScaled = false;
  crewButtonKor.color = "#00000000";
  crewButtonKor.strokeWeight = 00;
- crewButtonKor.onRelease = function() {
-   alert('Crews');
+ crewButtonKor.onPress = function() {
  }
 
  passengerButtonKor = new Clickable();
@@ -119,7 +123,7 @@ function intialButtons() {
  passengerButtonKor.textScaled = false;
  passengerButtonKor.color = "#00000000";
  passengerButtonKor.strokeWeight = 00;
- passengerButtonKor.onRelease = function() {
+ passengerButtonKor.onPress = function() {
    alert('Passengers');
  }
 
@@ -135,7 +139,7 @@ function intialButtons() {
  teacherButtonKor.textScaled = false;
  teacherButtonKor.color = "#00000000";
  teacherButtonKor.strokeWeight = 00;
- teacherButtonKor.onRelease = function() {
+ teacherButtonKor.onPress = function() {
    alert('Teachers');
  }
 
@@ -151,7 +155,7 @@ function intialButtons() {
  studentButtonKor.textScaled = false;
  studentButtonKor.color = "#00000000";
  studentButtonKor.strokeWeight = 00;
- studentButtonKor.onRelease = function() {
+ studentButtonKor.onPress = function() {
    alert('Students');
  }
 
@@ -178,6 +182,19 @@ artistEngButton.color = "#00000000";
 artistEngButton.strokeWeight = 00;
 artistEngButton.onRelease = function() {
   pageState = 'lastEng'
+}
+
+closeButton = new Clickable();
+closeButton.locate(-400, -500);
+closeButton.text = "X";
+closeButton.textColor = "#FFFFFF";
+closeButton.textSize = 25;
+closeButton.textFont = myKfont;
+closeButton.textScaled = false;
+closeButton.color = "#00000000";
+closeButton.strokeWeight = 00;
+closeButton.onRelease = function() {
+  pageState = 'mainKor'
 }
 
 }
