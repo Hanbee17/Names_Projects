@@ -10,23 +10,28 @@ var teacherButton;
 var studentButton;
 
 function startButton() {
-  shipButton.locate(windowWidth*0.45, windowHeight*0.45);
+  shipButton.locate(windowWidth*0.445, windowHeight*0.35);
 }
 
 function languageButtons() {
-  korButton.locate(windowWidth*0.85, windowHeight*0.04);
-  engButton.locate(windowWidth*0.9, windowHeight*0.04);
+  korButton.locate(windowWidth*0.91, windowHeight*0.04);
+  engButton.locate(windowWidth*0.95, windowHeight*0.04);
   //spanButton.locate(windowWidth*0.95, windowHeight*0.04);
 }
 
 function nameButtons () {
-
-  crewButton.locate(windowWidth*0.4, level2*1.1);
+  crewButton.locate(windowWidth*0.4, level2*1.3);
   passengerButton.locate(windowWidth*0.4, level2*1.3);
   teacherButton.locate(windowWidth*0.4, level2*1.6);
   studentButton.locate(windowWidth*0.5, level2*2);
+ }
 
-  arrowForLast.locate(windowWidth*0.5, windowHeight*2.9)
+ function artistKor () {
+   artistKorButton.locate(windowWidth*0.5, windowHeight*2.9)
+ }
+
+ function artistEng () {
+   artistEngButton.locate(windowWidth*0.5, windowHeight*2.9)
  }
 
 function intialButtons() {
@@ -40,7 +45,6 @@ function intialButtons() {
   shipButton.color = "#00000000";
   shipButton.strokeWeight = 00;
   shipButton.onRelease = function() {
-    alert('It could be very disturbing and traumatic experience. Please leave if you do not want it.');
     pageState = 'mainKor'
     shipButton.locate(-400, -500);
   }
@@ -48,27 +52,27 @@ function intialButtons() {
  korButton = new Clickable();
  korButton.image = korean;
  korButton.imageScale = 1.2;
+ korButton.fitImage = true;
  korButton.locate(-400, -500);
  korButton.resize(windowWidth*0.03, windowWidth*0.015);
  korButton.text = "         ";
  korButton.color = "#00000000";
  korButton.strokeWeight = 00;
  korButton.onRelease = function() {
-   alert('한국어');
    pageState = 'mainKor'
    shipButton.locate(-400, -500);
  }
 
  engButton = new Clickable();
  engButton.image = english;
- engButton.imageScale = 1.2;
+ engButton.imageScale = 1.1;
+ engButton.fitImage = true;
  engButton.locate(-400, -500);
  engButton.resize(windowWidth*0.03, windowWidth*0.015);
  engButton.text = "         ";
  engButton.color = "#00000000";
  engButton.strokeWeight = 00;
  engButton.onRelease = function() {
-   alert('English');
    pageState = 'mainEng'
    shipButton.locate(-400, -500);
  }
@@ -123,14 +127,22 @@ function intialButtons() {
    alert('Students');
  }
 
-arrowForLast = new Clickable();
-arrowForLast.locate(-400, -500);
-arrowForLast.text = "Click to Go Last Page";
-arrowForLast.color = "#00000000";
-arrowForLast.strokeWeight = 00;
-arrowForLast.onRelease = function() {
-  alert('last Page');
+artistKorButton = new Clickable();
+artistKorButton.locate(-400, -500);
+artistKorButton.text = "다음으로 가려면 누르세요";
+artistKorButton.color = "#00000000";
+artistKorButton.strokeWeight = 00;
+artistKorButton.onRelease = function() {
   pageState = 'lastKor'
+}
+
+artistEngButton = new Clickable();
+artistEngButton.locate(-400, -500);
+artistEngButton.text = "Click to Go Last Page";
+artistEngButton.color = "#00000000";
+artistEngButton.strokeWeight = 00;
+artistEngButton.onRelease = function() {
+  pageState = 'lastEng'
 }
 
 }
