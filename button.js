@@ -282,7 +282,7 @@ function intialButtons() {
   crewButtonEng.image = symbol;
   crewButtonEng.imageScale = 1.5;
   crewButtonEng.fitImage = true;
-  crewButtonEng.textColor = "#000000";
+  crewButtonEng.textColor = "#FFFFFF";
   crewButtonEng.textSize = 30;
   crewButtonEng.textFont = myKfont;
   crewButtonEng.textScaled = false;
