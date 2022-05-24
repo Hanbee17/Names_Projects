@@ -43,6 +43,7 @@ function intialButtons() {
     ksySound.pause();
     pshSound.pause();
     pysSound.pause();
+    myBgm.pause();
     mySoundOff.locate(windowWidth * 0.01, windowHeight * 0.035);
     mySoundOn.locate(-400,-400);
   }
@@ -50,7 +51,7 @@ function intialButtons() {
 
   //Sound Off
   mySoundOff = new Clickable();
-  mySoundOff.image = soundOff;
+  mySoundOff.image = soundOff;2
   mySoundOff.locate(-400, -500);
   mySoundOff.resize(30, 30);
   mySoundOff.text = "  ";
@@ -275,22 +276,6 @@ function intialButtons() {
     pysSound.pause();
   }
 
-  artistKorButton = new Clickable();
-  artistKorButton.locate(-400, -500);
-  artistKorButton.image = symbol;
-  artistKorButton.imageScale = 1.5;
-  artistKorButton.fitImage = true;
-  artistKorButton.text = "작가의 말";
-  artistKorButton.textColor = "#000000";
-  artistKorButton.textSize = 25;
-  artistKorButton.textFont = myKfont;
-  artistKorButton.textScaled = false;
-  artistKorButton.color = "#00000000";
-  artistKorButton.strokeWeight = 00;
-  artistKorButton.onRelease = function() {
-    pageState = 'lastKor'
-  }
-
   crewButtonEng = new Clickable();
   crewButtonEng.locate(-400, -500);
   crewButtonEng.text = "CREW MEMBERS";
@@ -379,6 +364,24 @@ function intialButtons() {
     text('Of the 325 students, 248 died and 2 missing', windowWidth * 0.5, windowHeight * 2.18)
   }
 
+  artistKorButton = new Clickable();
+  artistKorButton.locate(-400, -500);
+  artistKorButton.image = symbol;
+  artistKorButton.imageScale = 1.5;
+  artistKorButton.fitImage = true;
+  artistKorButton.text = "작가의 말";
+  artistKorButton.textColor = "#000000";
+  artistKorButton.textSize = 25;
+  artistKorButton.textFont = myKfont;
+  artistKorButton.textScaled = false;
+  artistKorButton.color = "#00000000";
+  artistKorButton.strokeWeight = 00;
+  artistKorButton.onRelease = function() {
+    pageState = 'lastKor'
+    oceanSound.pause();
+    myBgm.loop();
+  }
+
   artistEngButton = new Clickable();
   artistEngButton.locate(-400, -500);
   artistEngButton.image = symbol;
@@ -393,6 +396,8 @@ function intialButtons() {
   artistEngButton.strokeWeight = 00;
   artistEngButton.onRelease = function() {
     pageState = 'lastEng'
+    oceanSound.pause();
+    myBgm.loop();
   }
 
   gobackButtonKor = new Clickable();
@@ -409,6 +414,8 @@ function intialButtons() {
   gobackButtonKor.strokeWeight = 00;
   gobackButtonKor.onRelease = function() {
     pageState = 'mainKor'
+    myBgm.pause();
+    oceanSound.play();
   }
 
   gobackButtonEng = new Clickable();
@@ -425,6 +432,8 @@ function intialButtons() {
   gobackButtonEng.strokeWeight = 00;
   gobackButtonEng.onRelease = function() {
     pageState = 'mainEng'
+    myBgm.pause();
+    oceanSound.play();
   }
 
 }

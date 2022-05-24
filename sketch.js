@@ -42,6 +42,8 @@ function preload() {
   ksySound = loadSound('./sound/ksy.mp3');
   pshSound = loadSound('./sound/psh.mp3');
   pysSound = loadSound('./sound/pys.mp3');
+
+  myBgm = loadSound('./sound/bgm.mp3');
 }
 
 function startButton() {
@@ -134,6 +136,8 @@ function draw() {
       artistEngButton.locate(-400, -500);
       korButton.locate(-400, -500);
       engButton.locate(-400, -500);
+      mySoundOn.locate(-400,-400);
+      mySoundOff.locate(-400,-400);
       break;
     case 'mainKor':
       artistEngButton.locate(-400, -500);
@@ -173,6 +177,8 @@ function draw() {
       lastPageKor();
       gobackButtonKor.locate(windowWidth * 0.475, windowHeight *0.85);
       gobackButtonEng.locate(-400, -500);
+      mySoundOn.locate(-400,-400);
+      mySoundOff.locate(-400,-400);
       break;
     case 'lastEng':
       artistKorButton.locate(-400, -500);
@@ -182,6 +188,8 @@ function draw() {
       lastPageEng();
       gobackButtonKor.locate(-400, -500);
       gobackButtonEng.locate(windowWidth * 0.475, windowHeight * 0.85);
+      mySoundOn.locate(-400,-400);
+      mySoundOff.locate(-400,-400);
       break;
   }
 
