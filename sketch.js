@@ -136,8 +136,6 @@ function draw() {
       artistEngButton.locate(-400, -500);
       korButton.locate(-400, -500);
       engButton.locate(-400, -500);
-      mySoundOn.locate(-400,-400);
-      mySoundOff.locate(-400,-400);
       break;
     case 'mainKor':
       artistEngButton.locate(-400, -500);
