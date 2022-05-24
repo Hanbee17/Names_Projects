@@ -14,8 +14,7 @@ User Interaction : For this project, users would experience disturbing moods of 
 
 This project began from my ongoing question about why should people move on from loss. For this project, I will continue to make an interactive website based on mass death caused by incidents. For my final project , I created a webpage based on the Sewol Ferry Tragedy. I used the lists of names of the people who died and made some users interact with it. For visualization, I used a ferry ship and a side view of the ocean.
 
-**Features**
-
+###Features
 - Click the icon on the first page to move to the main page
 - Click the flags to change the language[Korean, English]
 - Click the speaker icon to pause or continue playing
@@ -25,9 +24,16 @@ This project began from my ongoing question about why should people move on from
 - Click the “artist’s statement” to move to an artist statement page
 - Click "Go Back" button to go back to the main page
 
-**Credits**
+##Credits
 
+**p5.js libraries**
 - clicks based on [p5.js clickable libraries](https://github.com/Lartu/p5.clickable)
 - animation based on [p5.createLoop](https://www.npmjs.com/package/p5.createloop)
+
+**Sound**
 - Ocean Sound by [hisoul](https://freesound.org/people/hisoul/sounds/365659/)
-- Background music by [Dylan Owen](https://www.youtube.com/watch?v=Uk5zngU-aAE)
+- "A Thousand Winds" music by [Lim Hyung Joo](https://www.youtube.com/watch?v=bIgHolcHEmk)
+- Recording 1 by [박수현](https://www.youtube.com/watch?v=7sLf9nT0a20&t=406s)
+- Recording 2 by [박예슬](https://www.youtube.com/watch?v=dVEfPP8zLLc)
+- Recording 3 by [김동협](https://www.youtube.com/watch?v=FAbdIywTB7M&t=503s)
+- Recording 4 by [김시연](https://www.youtube.com/watch?v=LM7lJYiYUI8)
