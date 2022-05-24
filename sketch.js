@@ -100,7 +100,7 @@ function setup() {
   cvn = createCanvas(windowWidth, windowHeight * 0.8);
   cvn.parent('canvas');
 
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 250; i++) {
     bubbles[i] = new Bubble(random(width), random(height));
   }
 
@@ -258,26 +258,6 @@ function mainKorScreen() {
   drawWaves();
 }
 
-class Bubble {
-  constructor() {
-    this.x = random(-width, width);
-    this.y = random(-height, height * 3);
-    this.z = random(width);
-  }
-  move() {
-    this.y--
-    if (this.y > windowHeight * 1) {
-      this.y = 0;
-    }
-  }
-  body() {
-    fill(150, 188, 255);
-    noStroke();
-    this.size = map(this.z, 0, width, 20, 0);
-    ellipse(this.x, this.y, this.size, this.size);
-  }
-}
-
 function drawWaves() {
   fill(3, 4, 94);
   noStroke();
@@ -293,7 +273,7 @@ function drawWaves() {
   vertex(0, height);
   endShape(CLOSE);
 
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].body();
     bubbles[i].move();
   }
@@ -302,6 +282,26 @@ function drawWaves() {
   scale(0.7, 0.8);
   ferryAnimation();
   pop();
+}
+
+class Bubble {
+  constructor() {
+    this.x = random(-width, width);
+    this.y = random(-height, height * 5);
+    this.z = random(width);
+  }
+  move() {
+    this.y--
+    if (this.y < windowHeight*0.65) {
+      this.y = -height;
+    }  
+  }
+  body() {
+    fill(0, 119, 182);
+    noStroke();
+    this.size = map(this.z, 0, width, 20, 0);
+    ellipse(this.x, this.y, this.size, this.size);
+  }
 }
 
 function ferryAnimation() {
