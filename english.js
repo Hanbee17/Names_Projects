@@ -1,36 +1,31 @@
 
 
 function mainEngScreen() {
-  createCanvas(windowWidth * 1, windowHeight * 3);
+  createCanvas(windowWidth * 1, windowHeight * 2.6);
   background(202, 240, 248);
   languageButtons();
-  artistEng();
 
   push();
   textAlign(CENTER);
   textSize(25);
   fill(2, 62, 138, 200);
   textFont(myKfont);
-  text('On April 16, 2014', windowWidth * 0.5, windowHeight * 0.15);
-  text('the Sewol ferry, en route from Incheon to Jeju,', windowWidth * 0.5, windowHeight * 0.18);
-  text('sank in the sea near Jindo,', windowWidth * 0.5, windowHeight * 0.21);
-  text('resulting in a major catastrophe,', windowWidth * 0.5, windowHeight * 0.24);
-  text('with 5 missing and 299 fatalities out of 476 people on board,', windowWidth * 0.5, windowHeight * 0.27);
-  text('resulting in a total of 304 deaths.', windowWidth * 0.5, windowHeight * 0.30);
+  text('On April 16, 2014', windowWidth * 0.5, windowHeight * 0.09);
+  text('the Sewol ferry, en route from Incheon to Jeju,', windowWidth * 0.5, windowHeight * 0.12);
+  text('sank in the sea near Jindo,', windowWidth * 0.5, windowHeight * 0.15);
+  text('resulting in a major catastrophe,', windowWidth * 0.5, windowHeight * 0.18);
+  text('with 5 missing and 299 fatalities out of 476 people on board,', windowWidth * 0.5, windowHeight * 0.21);
+  text('resulting in a total of 304 deaths.', windowWidth * 0.5, windowHeight * 0.24);
 
   fill(0, 150, 199)
-  text('Scroll dowm, after pressing W.', windowWidth * 0.5, windowHeight * 0.35);
+  text('Scroll dowm, after pressing W.', windowWidth * 0.5, windowHeight * 0.29);
+  text('After that, hover and press on yellow ribons.', windowWidth * 0.5, windowHeight * 0.32);
 
+  textFont("san-serif");
+  text('🎗', windowWidth * 0.5, windowHeight * 0.355);
   pop();
 
   drawWaves();
-
-  nameCrewsRandom();
-  namePassengersRandom();
-  nameTeachersRandom();
-  nameStudentsRandom();
-
-
 }
 
 function lastPageEng() {

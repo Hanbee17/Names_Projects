@@ -1,4 +1,4 @@
-let nameStudents = ['고해인 ',
+let nameStudents = ['고해인',
   '김민지',
   '김민희',
   '김수경',
@@ -11,8 +11,8 @@ let nameStudents = ['고해인 ',
   '박성빈',
   '우소영',
   '유미지',
-  '이수연 ',
-  '이연화 ',
+  '이수연',
+  '이연화',
   '정가현',
   '조은화',
   '한고운',
@@ -46,12 +46,10 @@ let nameStudents = ['고해인 ',
   '김빛나라',
   '김소연',
   '김수경',
-  '김시연',
   '김영은',
   '김주은',
   '김지인',
   '박영란',
-  '박예슬',
   '박지우',
   '박지윤',
   '박채연',
@@ -80,7 +78,6 @@ let nameStudents = ['고해인 ',
   '김윤수',
   '김정현',
   '김호연',
-  '박수현',
   '박정훈',
   '빈하용',
   '슬라바',
@@ -125,7 +122,6 @@ let nameStudents = ['고해인 ',
   '구태민',
   '권순범',
   '김동영',
-  '김동협',
   '김민규',
   '김승태',
   '김승혁',
@@ -248,6 +244,8 @@ let nameStudents = ['고해인 ',
   '이해주',
   '장수정',
   '장혜원',
+  '박영인',
+
 ]
 
 let nameTeachers = ['유니나',
@@ -260,6 +258,8 @@ let nameTeachers = ['유니나',
   '최혜정',
   '강민규',
   '박육근',
+  '고창석',
+  '양승진'
 ]
 
 let namePassengers = ['김순금',
@@ -292,6 +292,9 @@ let namePassengers = ['김순금',
   '한금희',
   '이도남',
   '리샹하오',
+  '권재근',
+  '권혁',
+  '이영숙'
 ]
 
 let nameCrews = ['박지영',
@@ -303,7 +306,7 @@ let nameCrews = ['박지영',
   '김기웅',
   '구춘미',
   '이현우',
-  '방현수',
+  '방현수'
 ]
 
 let ynameCrews = [];
@@ -320,7 +323,7 @@ let xnameStudents = [];
 
 function nameCrewsRandom() {
   for (let i = 0; i < nameCrews.length; i++) {
-    fill(2, 62, 138);
+    fill(173, 232, 244);
     textAlign(CENTER);
     textFont(myKfont);
     textSize(28);
@@ -343,7 +346,7 @@ function nameCrewsRandomSetUp() {
 
 function namePassengersRandom() {
   for (let i = 0; i < namePassengers.length; i++) {
-    fill(0, 150, 199);
+    fill(72, 202, 228);
     textAlign(CENTER);
     textFont(myKfont);
     textSize(28);
@@ -366,7 +369,7 @@ function namePassengersRandomSetUp() {
 
 function nameTeachersRandom() {
   for (let i = 0; i < nameTeachers.length; i++) {
-    fill(72, 202, 228);
+    fill(0, 150, 199);
     textAlign(CENTER);
     textFont(myKfont);
     textSize(28);
@@ -389,7 +392,7 @@ function nameTeachersRandomSetUp() {
 
 function nameStudentsRandom() {
   for (let i = 0; i < nameStudents.length; i++) {
-    fill(144, 244, 239);
+    fill(2, 62, 138);
     textAlign(CENTER);
     textFont(myKfont);
     textSize(28);

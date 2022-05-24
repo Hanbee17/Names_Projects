@@ -44,6 +44,56 @@ function preload() {
   pysSound = loadSound('./sound/pys.mp3');
 }
 
+function startButton() {
+  shipButton.locate(windowWidth * 0.445, windowHeight * 0.35);
+}
+
+function languageButtons() {
+  korButton.locate(windowWidth * 0.91, windowHeight * 0.04);
+  engButton.locate(windowWidth * 0.95, windowHeight * 0.04);
+  //spanButton.locate(windowWidth*0.95, windowHeight*0.04);
+}
+
+//Korean Names Buttons
+function nameButtonsKor() {
+  crewButtonEng.locate(-400, -500);
+  passengerButtonEng.locate(-400, -500);
+  teacherButtonEng.locate(-400, -500);
+  studentButtonEng.locate(-400, -500);
+
+  crewButtonKor.locate(windowWidth * 0.475, windowHeight * 1);
+  passengerButtonKor.locate(windowWidth * 0.475, windowHeight * 1.25);
+  teacherButtonKor.locate(windowWidth * 0.475, windowHeight * 1.55);
+  studentButtonKor.locate(windowWidth * 0.475, windowHeight * 2.08);
+}
+
+function nameButtonsEng() {
+  crewButtonKor.locate(-400, -500);
+  passengerButtonKor.locate(-400, -500);
+  teacherButtonKor.locate(-400, -500);
+  studentButtonKor.locate(-400, -500);
+
+  crewButtonEng.locate(windowWidth * 0.475, windowHeight * 1);
+  passengerButtonEng.locate(windowWidth * 0.475, windowHeight * 1.25);
+  teacherButtonEng.locate(windowWidth * 0.475, windowHeight * 1.55);
+  studentButtonEng.locate(windowWidth * 0.475, windowHeight * 2.08);
+}
+
+function nameWithSoundButtons() {
+  kdhButton.locate(windowWidth * 0.3, windowHeight * 2.23)
+  ksyButton.locate(windowWidth * 0.56, windowHeight * 1.8)
+  pshButton.locate(windowWidth * 0.33, windowHeight * 1.75)
+  pysButton.locate(windowWidth * 0.67, windowHeight * 2.2)
+}
+
+function artistKor() {
+  artistKorButton.locate(windowWidth * 0.475, windowHeight * 2.5)
+}
+
+function artistEng() {
+  artistEngButton.locate(windowWidth * 0.475, windowHeight * 2.5)
+}
+
 function setup() {
   cvn = createCanvas(windowWidth, windowHeight * 0.8);
   cvn.parent('canvas');
@@ -82,19 +132,31 @@ function draw() {
     case 'mainKor':
       artistEngButton.locate(-400, -500);
       mainKorScreen();
+      if (keyIsDown) {
+        if (keyCode == 87) {
+          nameButtonsKor();
+          artistKor();
+        } else {
+        }
+      }
+
       break;
     case 'mainEng':
       artistKorButton.locate(-400, -500);
       mainEngScreen();
+      if (keyIsDown) {
+        if (keyCode == 87) {
+          nameButtonsEng();
+          artistEng();
+        } else {
+        }
+      }
+
       break;
+
     case 'mainSpan':
       //mainSpanScreen();
       spanButton.locate(-400, -500);
-      break;
-    case 'crewPopUp':
-      popUpCrewsKor();
-      korButton.locate(-400, -500);
-      engButton.locate(-400, -500);
       break;
     case 'lastKor':
       artistKorButton.locate(-400, -500);
@@ -123,13 +185,23 @@ function draw() {
 
   crewButtonKor.draw();
   passengerButtonKor.draw();
-  studentButtonKor.draw();
   teacherButtonKor.draw();
+  studentButtonKor.draw();
+
+  kdhButton.draw();
+  ksyButton.draw();
+  pshButton.draw();
+  pysButton.draw();
 
   artistKorButton.draw();
+
+  crewButtonEng.draw();
+  passengerButtonEng.draw();
+  teacherButtonEng.draw();
+  studentButtonEng.draw();
+
   artistEngButton.draw();
 
-  closeButton.draw();
 }
 
 function firstScreen() {
@@ -155,7 +227,7 @@ function mainKorScreen() {
 
   fill(0, 150, 199)
   text('W를 누른 후, 스크롤을 내리세요.', windowWidth * 0.5, windowHeight * 0.29);
-  text('그 후, 노란 리본을 누르세요.', windowWidth * 0.5, windowHeight * 0.32);
+  text('그 후, 노란 리본을 누르고 계세요.', windowWidth * 0.5, windowHeight * 0.32);
 
   textFont("san-serif");
   text('🎗', windowWidth * 0.5, windowHeight * 0.355);
@@ -208,22 +280,17 @@ function drawWaves() {
   scale(0.7, 0.8);
   ferryAnimation();
   pop();
-
-
 }
 
 function ferryAnimation() {
   if (keyIsDown) {
     if (keyCode == 87) {
       ferryAni.nextFrame();
-
-      nameButtons();
+      nameWithSoundButtons();
       nameCrewsRandom();
       namePassengersRandom();
       nameTeachersRandom();
       nameStudentsRandom();
-
-      artistKor();
     } else {
       ferryAni.stop();
     }
