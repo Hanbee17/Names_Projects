@@ -112,7 +112,7 @@ function intialButtons() {
   crewButtonKor.image = symbol;
   crewButtonKor.imageScale = 1.5;
   crewButtonKor.fitImage = true;
-  crewButtonKor.textColor = "#000000";
+  crewButtonKor.textColor = "#FFFFFF";
   crewButtonKor.textSize = 30;
   crewButtonKor.textFont = myKfont;
   crewButtonKor.textScaled = false;
@@ -134,7 +134,7 @@ function intialButtons() {
   passengerButtonKor.image = symbol;
   passengerButtonKor.imageScale = 1.5;
   passengerButtonKor.fitImage = true;
-  passengerButtonKor.textColor = "#000000";
+  passengerButtonKor.textColor = "#FFFFFF";
   passengerButtonKor.textSize = 30;
   passengerButtonKor.textFont = myKfont;
   passengerButtonKor.textScaled = false;
@@ -156,7 +156,7 @@ function intialButtons() {
   teacherButtonKor.image = symbol;
   teacherButtonKor.imageScale = 1.5;
   teacherButtonKor.fitImage = true;
-  teacherButtonKor.textColor = "#000000";
+  teacherButtonKor.textColor = "#FFFFFF";
   teacherButtonKor.textSize = 30;
   teacherButtonKor.textFont = myKfont;
   teacherButtonKor.textScaled = false;
@@ -178,7 +178,7 @@ function intialButtons() {
   studentButtonKor.image = symbol;
   studentButtonKor.imageScale = 1.5;
   studentButtonKor.fitImage = true;
-  studentButtonKor.textColor = "#000000";
+  studentButtonKor.textColor = "#FFFFFF";
   studentButtonKor.textSize = 30;
   studentButtonKor.textFont = myKfont;
   studentButtonKor.textScaled = false;
@@ -304,7 +304,7 @@ function intialButtons() {
   passengerButtonEng.image = symbol;
   passengerButtonEng.imageScale = 1.5;
   passengerButtonEng.fitImage = true;
-  passengerButtonEng.textColor = "#000000";
+  passengerButtonEng.textColor = "#FFFFFF";
   passengerButtonEng.textSize = 30;
   passengerButtonEng.textFont = myKfont;
   passengerButtonEng.textScaled = false;
@@ -326,7 +326,7 @@ function intialButtons() {
   teacherButtonEng.image = symbol;
   teacherButtonEng.imageScale = 1.5;
   teacherButtonEng.fitImage = true;
-  teacherButtonEng.textColor = "#000000";
+  teacherButtonEng.textColor = "#FFFFFF";
   teacherButtonEng.textSize = 30;
   teacherButtonEng.textFont = myKfont;
   teacherButtonEng.textScaled = false;
@@ -348,7 +348,7 @@ function intialButtons() {
   studentButtonEng.image = symbol;
   studentButtonEng.imageScale = 1.5;
   studentButtonEng.fitImage = true;
-  studentButtonEng.textColor = "#000000";
+  studentButtonEng.textColor = "#FFFFFF";
   studentButtonEng.textSize = 30;
   studentButtonEng.textFont = myKfont;
   studentButtonEng.textScaled = false;

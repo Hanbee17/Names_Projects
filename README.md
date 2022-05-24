@@ -34,7 +34,7 @@ This project began from my ongoing question about why should people move on from
 **Sound**
 - Ocean Sound by [hisoul](https://freesound.org/people/hisoul/sounds/365659/)
 - "A Thousand Winds" music by [Lim Hyung Joo](https://www.youtube.com/watch?v=bIgHolcHEmk)
-- Recording 1 by [박수현](https://www.youtube.com/watch?v=7sLf9nT0a20&t=406s)
-- Recording 2 by [박예슬](https://www.youtube.com/watch?v=dVEfPP8zLLc)
-- Recording 3 by [김동협](https://www.youtube.com/watch?v=FAbdIywTB7M&t=503s)
-- Recording 4 by [김시연](https://www.youtube.com/watch?v=LM7lJYiYUI8)
+- Student Recording 1 by [박수현](https://www.youtube.com/watch?v=7sLf9nT0a20&t=406s)
+- Student Recording 2 by [박예슬](https://www.youtube.com/watch?v=dVEfPP8zLLc)
+- Student Recording 3 by [김동협](https://www.youtube.com/watch?v=FAbdIywTB7M&t=503s)
+- Student Recording 4 by [김시연](https://www.youtube.com/watch?v=LM7lJYiYUI8)

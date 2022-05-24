@@ -55,7 +55,7 @@ function lastPageEng() {
 
   text("We still don’t know why the Sewol Ferry sank,", windowWidth * 0.5, windowHeight * 0.27)
   text("why the rescue team arrived late,", windowWidth * 0.5, windowHeight * 0.30)
-  text("why it was broadcasted that everyone was safely rescued.", windowWidth * 0.5, windowHeight * 0.33)
+  text("why was it broadcasted that everyone was apparently safely rescued.", windowWidth * 0.5, windowHeight * 0.33)
   text("People criticized the bereaved families for wanting to know why their families died.", windowWidth * 0.5, windowHeight * 0.36)
   text("And easily told them to just move on. ", windowWidth * 0.5, windowHeight * 0.39)
 
@@ -68,9 +68,8 @@ function lastPageEng() {
   text("The bodies of 5 people have not yet been even found.", windowWidth * 0.5, windowHeight * 0.63)
 
   text("We should not forget.", windowWidth * 0.5, windowHeight * 0.69)
-  text("It could have happened to me, to my friend, to my families", windowWidth * 0.5, windowHeight * 0.72)
-  text("No one has a right to blame the families of the victims of this tragedy.", windowWidth * 0.5, windowHeight * 0.75)
-
+  text("It could have happened to us, to our friends, to our families", windowWidth * 0.5, windowHeight * 0.72)
+  text("No one has the right to blame the victims' familes of this tragedy.", windowWidth * 0.5, windowHeight * 0.75)
 
   text("I will always remember that spring. ", windowWidth * 0.5, windowHeight * 0.81)
 }
