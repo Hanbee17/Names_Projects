@@ -36,7 +36,12 @@ function preload() {
 
   soundOn = loadImage('./sound/on.png');
   soundOff = loadImage('./sound/off.png');
+
   oceanSound = loadSound('./sound/ocean.mp3');
+  kdhSound = loadSound('./sound/kdh.mp3');
+  ksySound = loadSound('./sound/ksy.mp3');
+  pshSound = loadSound('./sound/psh.mp3');
+  pysSound = loadSound('./sound/pys.mp3');
 }
 
 function setup() {
@@ -150,10 +155,10 @@ function mainKorScreen() {
 
   fill(0, 150, 199)
   text('W를 누른 후, 스크롤을 내리세요.', windowWidth * 0.5, windowHeight * 0.29);
-  text('노란 리본을 누르세요.', windowWidth * 0.5, windowHeight * 0.32);
+  text('그 후, 노란 리본을 누르세요.', windowWidth * 0.5, windowHeight * 0.32);
 
   textFont("san-serif");
-  text('🎗', windowWidth * 0.44, windowHeight * 0.32);
+  text('🎗', windowWidth * 0.5, windowHeight * 0.355);
   pop();
 
   drawWaves();
@@ -180,7 +185,7 @@ class Bubble {
 }
 
 function drawWaves() {
-  fill(2, 62, 138, 200);
+  fill(3, 4, 94);
   noStroke();
   beginShape();
   var xoff = 0;

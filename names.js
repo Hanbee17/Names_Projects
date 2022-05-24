@@ -320,7 +320,7 @@ let xnameStudents = [];
 
 function nameCrewsRandom() {
   for (let i = 0; i < nameCrews.length; i++) {
-    fill(255, 214, 255);
+    fill(2, 62, 138);
     textAlign(CENTER);
     textFont(myKfont);
     textSize(28);
@@ -343,7 +343,7 @@ function nameCrewsRandomSetUp() {
 
 function namePassengersRandom() {
   for (let i = 0; i < namePassengers.length; i++) {
-    fill(208, 244, 222);
+    fill(0, 150, 199);
     textAlign(CENTER);
     textFont(myKfont);
     textSize(28);
@@ -366,7 +366,7 @@ function namePassengersRandomSetUp() {
 
 function nameTeachersRandom() {
   for (let i = 0; i < nameTeachers.length; i++) {
-    fill(187, 208, 255);
+    fill(72, 202, 228);
     textAlign(CENTER);
     textFont(myKfont);
     textSize(28);
@@ -389,7 +389,7 @@ function nameTeachersRandomSetUp() {
 
 function nameStudentsRandom() {
   for (let i = 0; i < nameStudents.length; i++) {
-    fill(252, 246, 189);
+    fill(144, 244, 239);
     textAlign(CENTER);
     textFont(myKfont);
     textSize(28);
