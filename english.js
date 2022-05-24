@@ -48,31 +48,31 @@ function lastPageEng() {
 
   textSize(20);
   fill(248, 249, 250);
-  text("세월호 참사가 일어난 지 어느덧 8년이 지났다.", windowWidth * 0.5, windowHeight * 0.12)
-  text("그날의 충격도 아픔도 많이 무뎌지는 듯했다.", windowWidth * 0.5, windowHeight * 0.15)
-  text("그러나 아직도 세월호를 잊지 못하냐는 유가족들을 향한 날선 비난에", windowWidth * 0.5, windowHeight * 0.18)
-  text("그날의 참사가 다시 생각났다.", windowWidth * 0.5, windowHeight * 0.21)
+  text("Eight years have passed since the Sewol ferry tragedy.", windowWidth * 0.5, windowHeight * 0.12)
+  text("The shock and pain of that day seemed to have been forgotten.", windowWidth * 0.5, windowHeight * 0.15)
+  text("But the blame on the bereaved family for why can’t they let go,", windowWidth * 0.5, windowHeight * 0.18)
+  text("reminded me of the tragedy.", windowWidth * 0.5, windowHeight * 0.21)
 
-  text("우리는 아직도 왜 세월호가 침몰했는지,", windowWidth * 0.5, windowHeight * 0.27)
-  text("구조대는 늦게 도착했는지,", windowWidth * 0.5, windowHeight * 0.30)
-  text("모든 이들이 무사히 구조되었다고 오보가 났었는지 아직 모른다.", windowWidth * 0.5, windowHeight * 0.33)
-  text("그저 사랑하는 가족이 왜 죽었는지 알고 싶다던 유가족들에게 사람들은 비난을 했다.", windowWidth * 0.5, windowHeight * 0.36)
-  text("이제는 놓아주라고 잊으라고 자격도 없는 사람들이 그들을 마구 짓밟았다.", windowWidth * 0.5, windowHeight * 0.39)
+  text("We still don’t know why the Sewol Ferry sank,", windowWidth * 0.5, windowHeight * 0.27)
+  text("why the rescue team arrived late,", windowWidth * 0.5, windowHeight * 0.30)
+  text("why it was broadcasted that everyone was safely rescued.", windowWidth * 0.5, windowHeight * 0.33)
+  text("People criticized the bereaved families for wanting to know why their families died.", windowWidth * 0.5, windowHeight * 0.36)
+  text("And easily told them to just move on. ", windowWidth * 0.5, windowHeight * 0.39)
 
-  text("이 참사에서", windowWidth * 0.5, windowHeight * 0.45)
-  text("수학여행 간다고 들떠있던 248명의 18살 아이들이 죽었다.", windowWidth * 0.5, windowHeight * 0.48)
-  text("학생들을 지켜주던 10명의 교사도 죽었다.", windowWidth * 0.5, windowHeight * 0.51)
-  text("각자의 이유로 배를 탔던 일반 승객 30명도 죽었다.", windowWidth * 0.5, windowHeight * 0.54)
-  text("선원과 선상 아르바이트생들 10명도 죽었다.", windowWidth * 0.5, windowHeight * 0.57)
-  text("총 304명이 바다에서 죽었다.", windowWidth * 0.5, windowHeight * 0.60)
-  text("5명의 유해는 수습되지 못한 채 바다를 떠돌고 있다.", windowWidth * 0.5, windowHeight * 0.63)
+  text("In this tragedy,", windowWidth * 0.5, windowHeight * 0.45)
+  text("250 students that were excited about going on a school trip died.", windowWidth * 0.5, windowHeight * 0.48)
+  text("11 teachers that were protecting the students also died.", windowWidth * 0.5, windowHeight * 0.51)
+  text("33 ordinary passengers who boarded the ship for their own reasons also died.", windowWidth * 0.5, windowHeight * 0.54)
+  text("10 crew members and part-time students also died.", windowWidth * 0.5, windowHeight * 0.57)
+  text("A total of 304 people drowend at sea.", windowWidth * 0.5, windowHeight * 0.60)
+  text("The bodies of 5 people have not yet been even found.", windowWidth * 0.5, windowHeight * 0.63)
 
-  text("잊으면 안 된다.", windowWidth * 0.5, windowHeight * 0.69)
-  text("당시 17살이던 나에게, 내 친구에게, 내 형제자매들에게 일어났을 수도 있는 일이다.", windowWidth * 0.5, windowHeight * 0.72)
-  text("아무도 이 참사의 유가족들을 비난할 자격이 없다.", windowWidth * 0.5, windowHeight * 0.75)
+  text("We should not forget.", windowWidth * 0.5, windowHeight * 0.69)
+  text("It could have happened to me, to my friend, to my families", windowWidth * 0.5, windowHeight * 0.72)
+  text("No one has a right to blame the families of the victims of this tragedy.", windowWidth * 0.5, windowHeight * 0.75)
 
 
-  text("그날의 봄을 잊지 않겠다.", windowWidth * 0.5, windowHeight * 0.81)
+  text("I will always remember that spring. ", windowWidth * 0.5, windowHeight * 0.81)
 }
 
 

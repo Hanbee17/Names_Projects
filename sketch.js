@@ -128,9 +128,17 @@ function draw() {
   switch (pageState) {
     case 'title':
       firstScreen();
+      gobackButtonEng.locate(-400, -500);
+      gobackButtonKor.locate(-400, -500);
+      artistKorButton.locate(-400, -500);
+      artistEngButton.locate(-400, -500);
+      korButton.locate(-400, -500);
+      engButton.locate(-400, -500);
       break;
     case 'mainKor':
       artistEngButton.locate(-400, -500);
+      gobackButtonEng.locate(-400, -500);
+      gobackButtonKor.locate(-400, -500);
       mainKorScreen();
       if (keyIsDown) {
         if (keyCode == 87) {
@@ -139,10 +147,11 @@ function draw() {
         } else {
         }
       }
-
       break;
     case 'mainEng':
       artistKorButton.locate(-400, -500);
+      gobackButtonEng.locate(-400, -500);
+      gobackButtonKor.locate(-400, -500);
       mainEngScreen();
       if (keyIsDown) {
         if (keyCode == 87) {
@@ -151,9 +160,7 @@ function draw() {
         } else {
         }
       }
-
       break;
-
     case 'mainSpan':
       //mainSpanScreen();
       spanButton.locate(-400, -500);
@@ -164,6 +171,8 @@ function draw() {
       korButton.locate(-400, -500);
       engButton.locate(-400, -500);
       lastPageKor();
+      gobackButtonKor.locate(windowWidth * 0.475, windowHeight *0.85);
+      gobackButtonEng.locate(-400, -500);
       break;
     case 'lastEng':
       artistKorButton.locate(-400, -500);
@@ -171,6 +180,8 @@ function draw() {
       korButton.locate(-400, -500);
       engButton.locate(-400, -500);
       lastPageEng();
+      gobackButtonKor.locate(-400, -500);
+      gobackButtonEng.locate(windowWidth * 0.475, windowHeight * 0.85);
       break;
   }
 
@@ -201,6 +212,9 @@ function draw() {
   studentButtonEng.draw();
 
   artistEngButton.draw();
+
+  gobackButtonKor.draw();
+  gobackButtonEng.draw();
 
 }
 
@@ -347,9 +361,9 @@ function lastPageKor() {
   text("이제는 놓아주라고 잊으라고 자격도 없는 사람들이 그들을 마구 짓밟았다.", windowWidth * 0.5, windowHeight * 0.39)
 
   text("이 참사에서", windowWidth * 0.5, windowHeight * 0.45)
-  text("수학여행 간다고 들떠있던 248명의 18살 아이들이 죽었다.", windowWidth * 0.5, windowHeight * 0.48)
-  text("학생들을 지켜주던 10명의 교사도 죽었다.", windowWidth * 0.5, windowHeight * 0.51)
-  text("각자의 이유로 배를 탔던 일반 승객 30명도 죽었다.", windowWidth * 0.5, windowHeight * 0.54)
+  text("수학여행 간다고 들떠있던 250명의 18살 아이들이 죽었다.", windowWidth * 0.5, windowHeight * 0.48)
+  text("학생들을 지켜주던 11명의 교사도 죽었다.", windowWidth * 0.5, windowHeight * 0.51)
+  text("각자의 이유로 배를 탔던 일반 승객 33명도 죽었다.", windowWidth * 0.5, windowHeight * 0.54)
   text("선원과 선상 아르바이트생들 10명도 죽었다.", windowWidth * 0.5, windowHeight * 0.57)
   text("총 304명이 바다에서 죽었다.", windowWidth * 0.5, windowHeight * 0.60)
   text("5명의 유해는 수습되지 못한 채 바다를 떠돌고 있다.", windowWidth * 0.5, windowHeight * 0.63)

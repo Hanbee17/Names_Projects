@@ -306,7 +306,7 @@ function intialButtons() {
   crewButtonEng.onHover = function() {
     rectMode(CENTER);
     fill(0)
-    rect(windowWidth * 0.5, windowHeight * 1.09, 240, 40)
+    rect(windowWidth * 0.5, windowHeight * 1.09, 320, 40)
     fill(255)
     textSize(20);
     textAlign(CENTER);
@@ -328,7 +328,7 @@ function intialButtons() {
   passengerButtonEng.onHover = function() {
     rectMode(CENTER);
     fill(0)
-    rect(windowWidth * 0.5, windowHeight * 1.34, 350, 40)
+    rect(windowWidth * 0.5, windowHeight * 1.34, 430, 40)
     fill(255)
     textSize(20);
     textAlign(CENTER);
@@ -350,7 +350,7 @@ function intialButtons() {
   teacherButtonEng.onHover = function() {
     rectMode(CENTER);
     fill(0)
-    rect(windowWidth * 0.5, windowHeight * 1.64, 280, 40)
+    rect(windowWidth * 0.5, windowHeight * 1.64, 390, 40)
     fill(255)
     textSize(20);
     textAlign(CENTER);
@@ -372,7 +372,7 @@ function intialButtons() {
   studentButtonEng.onHover = function() {
     rectMode(CENTER);
     fill(0)
-    rect(windowWidth * 0.5, windowHeight * 2.17, 300, 40)
+    rect(windowWidth * 0.5, windowHeight * 2.17, 420, 40)
     fill(255)
     textSize(20);
     textAlign(CENTER);
@@ -393,6 +393,38 @@ function intialButtons() {
   artistEngButton.strokeWeight = 00;
   artistEngButton.onRelease = function() {
     pageState = 'lastEng'
+  }
+
+  gobackButtonKor = new Clickable();
+  gobackButtonKor.locate(-400, -500);
+  gobackButtonKor.image = symbol;
+  gobackButtonKor.imageScale = 1.5;
+  gobackButtonKor.fitImage = true;
+  gobackButtonKor.text = "앞으로 돌아가려면 누르세요";
+  gobackButtonKor.textColor = "#FFFFFF";
+  gobackButtonKor.textSize = 20;
+  gobackButtonKor.textFont = myKfont;
+  gobackButtonKor.textScaled = false;
+  gobackButtonKor.color = "#00000000";
+  gobackButtonKor.strokeWeight = 00;
+  gobackButtonKor.onRelease = function() {
+    pageState = 'mainKor'
+  }
+
+  gobackButtonEng = new Clickable();
+  gobackButtonEng.locate(-400, -500);
+  gobackButtonEng.image = symbol;
+  gobackButtonEng.imageScale = 1.5;
+  gobackButtonEng.fitImage = true;
+  gobackButtonEng.text = "Go Back to Main Page";
+  gobackButtonEng.textColor = "#FFFFFF";
+  gobackButtonEng.textSize = 20;
+  gobackButtonEng.textFont = myKfont;
+  gobackButtonEng.textScaled = false;
+  gobackButtonEng.color = "#00000000";
+  gobackButtonEng.strokeWeight = 00;
+  gobackButtonEng.onRelease = function() {
+    pageState = 'mainEng'
   }
 
 }
