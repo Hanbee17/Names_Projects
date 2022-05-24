@@ -398,11 +398,11 @@ function intialButtons() {
   gobackButtonKor = new Clickable();
   gobackButtonKor.locate(-400, -500);
   gobackButtonKor.image = symbol;
-  gobackButtonKor.imageScale = 1.5;
+  gobackButtonKor.imageScale = 1.2;
   gobackButtonKor.fitImage = true;
   gobackButtonKor.text = "앞으로 돌아가려면 누르세요";
   gobackButtonKor.textColor = "#FFFFFF";
-  gobackButtonKor.textSize = 20;
+  gobackButtonKor.textSize = 15;
   gobackButtonKor.textFont = myKfont;
   gobackButtonKor.textScaled = false;
   gobackButtonKor.color = "#00000000";
@@ -414,11 +414,11 @@ function intialButtons() {
   gobackButtonEng = new Clickable();
   gobackButtonEng.locate(-400, -500);
   gobackButtonEng.image = symbol;
-  gobackButtonEng.imageScale = 1.5;
+  gobackButtonEng.imageScale = 1.2;
   gobackButtonEng.fitImage = true;
   gobackButtonEng.text = "Go Back to Main Page";
   gobackButtonEng.textColor = "#FFFFFF";
-  gobackButtonEng.textSize = 20;
+  gobackButtonEng.textSize = 15;
   gobackButtonEng.textFont = myKfont;
   gobackButtonEng.textScaled = false;
   gobackButtonEng.color = "#00000000";
