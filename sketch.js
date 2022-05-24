@@ -294,7 +294,8 @@ class Bubble {
     this.y--
     if (this.y < windowHeight*0.65) {
       this.y = -height;
-    // } else if (this.y > windowHeight*0.65) {
+    }
+     //else if (this.y > windowHeight*0.65) {
     //   this.y = windowHeight+10
     // }
   }
