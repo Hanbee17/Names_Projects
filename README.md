@@ -1,4 +1,6 @@
-# Cho_Names_Projects
+# Names_Projects
+
+To visit: [Click here](https://hanbee17.github.io/Cho_Names_Projects/)
 
 ART101 Final Projects
 
@@ -6,27 +8,26 @@ Title: Names
 
 Format: Interactive website
 
-Concept: The user will experience an interactive website.
+User Interaction : For this project, users would experience disturbing moods of seeing lists of names that died and hearing the recordings of the incidents.
 
-**Project Overview**
+## Purpose
 
-This project began from my ongoing question about why should people move on from loss. For this project,  I will create an interactive website based on mass death caused by incidents. For example, for my final, I will create a webpage based on Sewol Ferry Tragedy. I will get the lists of names of the people who died and make users interact with it. For visualization, I will use a ferry ship and a side view of the ocean. When users are scrolling the page, the ship will gradually sink into the ocean and the names will be appearing with various noises (I will use live news and videos filmed during the incident). In the end, users will be able to read descriptions of what happened. This is supposed to be a terrible and traumatic experience that makes the user think and know what happened and why it should be remembered. Moreover, I will make this webpage in three languages, Korean, English, and Spanish.
+This project began from my ongoing question about why should people move on from loss. For this project, I will continue to make an interactive website based on mass death caused by incidents. For my final project , I created a webpage based on the Sewol Ferry Tragedy. I used the lists of names of the people who died and made some users interact with it. For visualization, I used a ferry ship and a side view of the ocean.
 
 **Features**
 
-- scrolling
-- music
-- mouse interaction
-- keyboard interaction
-
-**Timeline**
-
-May 9-11: Coding Overall Functionality
-May 12-14: Making and Implementing Assets/Art
-May 15: Debugging and Testing Software
-May 16-22: Additional Features and Finishing Touches
+- Click the icon on the first page to move to the main page
+- Click the flags to change the language[Korean, English]
+- Click the speaker icon to pause or continue playing
+- Press W to flip the ferry ship and scroll down see the name
+- Hover yellow ribbons to read brief explanations about each group
+- Press on yellow ribbons with white words to play some disturbing sound that are a recordings from each students
+- Click the “artist’s statement” to move to an artist statement page
+- Click "Go Back" button to go back to the main page
 
 **Credits**
 
 - clicks based on [p5.js clickable libraries](https://github.com/Lartu/p5.clickable)
 - animation based on [p5.createLoop](https://www.npmjs.com/package/p5.createloop)
+- Ocean Sound by [hisoul](https://freesound.org/people/hisoul/sounds/365659/)
+- Background music by [Dylan Owen](https://www.youtube.com/watch?v=Uk5zngU-aAE)
