@@ -34,6 +34,8 @@ function preload() {
 
   symbol = loadImage('./assets/ribbon.png');
 
+  soundOn = loadImage('./sound/on.png');
+  soundOff = loadImage('./sound/off.png');
   oceanSound = loadSound('./sound/ocean.mp3');
 }
 
@@ -43,11 +45,11 @@ function setup() {
 
   for (let i = 0; i < 200; i++) {
     bubbles[i] = new Bubble(random(width), random(height));
-    }
+  }
 
-  for (let i=0; i<800; i++) {
-   stars.push(new Star());
- }
+  for (let i = 0; i < 800; i++) {
+    stars.push(new Star());
+  }
 
   background(0);
   intialButtons();
@@ -107,6 +109,9 @@ function draw() {
 
   shipButton.draw();
 
+  mySoundOn.draw();
+  mySoundOff.draw();
+
   korButton.draw();
   engButton.draw();
   spanButton.draw();
@@ -156,20 +161,20 @@ function mainKorScreen() {
 
 class Bubble {
   constructor() {
-    this.x = random(-width,width);
-    this.y = random(-height, height*3);
+    this.x = random(-width, width);
+    this.y = random(-height, height * 3);
     this.z = random(width);
   }
   move() {
-    this.y --
-    if (this.y > windowHeight*1) {
+    this.y--
+    if (this.y > windowHeight * 1) {
       this.y = 0;
     }
   }
   body() {
     fill(150, 188, 255);
     noStroke();
-    this.size = map(this.z,0,width,20,0);
+    this.size = map(this.z, 0, width, 20, 0);
     ellipse(this.x, this.y, this.size, this.size);
   }
 }
@@ -190,8 +195,8 @@ function drawWaves() {
   endShape(CLOSE);
 
   for (let i = 0; i < 200; i++) {
-   bubbles[i].body();
-   bubbles[i].move();
+    bubbles[i].body();
+    bubbles[i].move();
   }
 
   push();
@@ -223,23 +228,23 @@ function ferryAnimation() {
 
 class Star {
   constructor() {
-   this.x = random(-width,width);
-   this.y = random(-height,height);
-   this.z = random(width);
- }
+    this.x = random(-width, width);
+    this.y = random(-height, height);
+    this.z = random(width);
+  }
 
- show() {
+  show() {
     fill(255, 228, 92);
     noStroke();
     this.sx = map(this.x / this.z, 0, 1, 0, width);
     this.sy = map(this.y / this.z, 0, 1, 0, height);
-    this.size = map(this.z,0,width,10,0);
-    ellipse(this.sx,this.sy,this.size,this.size);
+    this.size = map(this.z, 0, width, 10, 0);
+    ellipse(this.sx, this.sy, this.size, this.size);
   }
 }
 
 function lastPageKor() {
-  createCanvas(windowWidth, windowHeight*0.9);
+  createCanvas(windowWidth, windowHeight * 0.9);
   background(1, 1, 20);
 
   for (let i = 0; i < stars.length; i++) {
