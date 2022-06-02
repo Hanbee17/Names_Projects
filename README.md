@@ -1,6 +1,6 @@
 # Names_Projects
 
-To visit: [Click here](https://hanbee17.github.io/Cho_Names_Projects/)
+To visit: [Click here](https://hanbee17.github.io/Names_Projects/)
 
 ART101 Final Projects
 
